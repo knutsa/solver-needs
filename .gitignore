@@ -1,0 +1,20 @@
+# Toolchain installs made by tools/setup_toolchain.sh
+tools/*
+!tools/setup_toolchain.sh
+!tools/cvc5_dafny.sh
+
+# Caches written by the pipeline (per-program extraction records, AST mappings, preludes)
+work/
+results/*/rows/
+
+# Logs of long runs
+.logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ruff_cache/
+.pytest_cache/
+*.egg-info/
+.DS_Store
