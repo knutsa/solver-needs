@@ -1,0 +1,10786 @@
+[
+ {
+  "key": "CF-120",
+  "expr": "s[1..][..|(s[1..])|-1] == s[1..|s|-1]",
+  "has_by_block": false,
+  "decl_lines": [
+   90,
+   105
+  ],
+  "seeds": {
+   "s[1..][..|(s[1..])|-1]": "fail",
+   "(s[1..])": "fail",
+   "s[1..]": "fail",
+   "s[1..|s|-1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s[1..][..|(s[1..])|-1] == s[1..|s|-1]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-0",
+  "expr": "x[..i+1] == x[..i] + [x[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   225,
+   260
+  ],
+  "seeds": {
+   "x[..i+1]": "fail",
+   "x[..i] + [x[i]]": "fail",
+   "x[..i]": "fail",
+   "x[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "x[..i+1] == x[..i] + [x[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-1",
+  "expr": "x[..|x|] == x",
+  "has_by_block": false,
+  "decl_lines": [
+   225,
+   260
+  ],
+  "seeds": {
+   "x[..|x|]": "fail"
+  },
+  "eq_seeds": {
+   "x[..|x|] == x": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-2",
+  "expr": "y[..i+1] == y[..i] + [y[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   225,
+   260
+  ],
+  "seeds": {
+   "y[..i+1]": "fail",
+   "y[..i] + [y[i]]": "fail",
+   "y[..i]": "fail",
+   "y[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "y[..i+1] == y[..i] + [y[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-3",
+  "expr": "y[..|y|] == y",
+  "has_by_block": false,
+  "decl_lines": [
+   225,
+   260
+  ],
+  "seeds": {
+   "y[..|y|]": "fail"
+  },
+  "eq_seeds": {
+   "y[..|y|] == y": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-4",
+  "expr": "scores[1..i+1] == scores[1..i] + [scores[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   40,
+   70
+  ],
+  "seeds": {
+   "scores[1..i+1]": "fail",
+   "scores[1..i] + [scores[i]]": "fail",
+   "scores[1..i]": "fail",
+   "scores[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "scores[1..i+1] == scores[1..i] + [scores[i]]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-5",
+  "expr": "(s + [y])[w] == x",
+  "has_by_block": false,
+  "decl_lines": [
+   12,
+   19
+  ],
+  "seeds": {
+   "(s + [y])[w]": "pass"
+  },
+  "eq_seeds": {
+   "(s + [y])[w] == x": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 15,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-6",
+  "expr": "newResult[w] == result[idx]",
+  "has_by_block": false,
+  "decl_lines": [
+   20,
+   110
+  ],
+  "seeds": {
+   "newResult[w]": "pass"
+  },
+  "eq_seeds": {
+   "newResult[w] == result[idx]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 51,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-7",
+  "expr": "newResult[|oldNR|] == result[i]",
+  "has_by_block": false,
+  "decl_lines": [
+   20,
+   110
+  ],
+  "seeds": {
+   "newResult[|oldNR|]": "pass"
+  },
+  "eq_seeds": {
+   "newResult[|oldNR|] == result[i]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 51,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-8",
+  "expr": "forall x :: (forall m | 0 <= m < k + 1 :: InSeq(x, stops[m])) ==> InSeq(x, newResult)",
+  "has_by_block": true,
+  "decl_lines": [
+   20,
+   110
+  ],
+  "seeds": {
+   "InSeq(x, newResult)": "invalid",
+   "InSeq(x, result)": "invalid",
+   "InSeq(x, stops[k])": "invalid",
+   "stops[k]": "fail",
+   "InSeq(result[ridx], stops[k])": "invalid",
+   "result[ridx]": "invalid",
+   "InSeq(result[ridx], newResult)": "invalid"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "CF-121",
+  "expr": "InSeq(x, result)",
+  "has_by_block": false,
+  "decl_lines": [
+   20,
+   110
+  ],
+  "seeds": {
+   "InSeq(x, result)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 100,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-9",
+  "expr": "a[0] == SeqMin(a)",
+  "has_by_block": false,
+  "decl_lines": [
+   74,
+   92
+  ],
+  "seeds": {
+   "a[0]": "pass"
+  },
+  "eq_seeds": {
+   "a[0] == SeqMin(a)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 79,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-172",
+  "expr": "a[0] == SeqMax(a)",
+  "has_by_block": false,
+  "decl_lines": [
+   93,
+   111
+  ],
+  "seeds": {
+   "a[0]": "pass"
+  },
+  "eq_seeds": {
+   "a[0] == SeqMax(a)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 98,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-10",
+  "expr": "ValidStoreConfig(a, lo, |a| + k)",
+  "has_by_block": false,
+  "decl_lines": [
+   112,
+   128
+  ],
+  "seeds": {
+   "ValidStoreConfig(a, lo, |a| + k)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 119,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-11",
+  "expr": "a[..i+1][..i] == a[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   155,
+   191
+  ],
+  "seeds": {
+   "a[..i+1][..i]": "fail",
+   "a[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..i+1][..i] == a[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-12",
+  "expr": "a[..|a|] == a",
+  "has_by_block": false,
+  "decl_lines": [
+   155,
+   191
+  ],
+  "seeds": {
+   "a[..|a|]": "fail"
+  },
+  "eq_seeds": {
+   "a[..|a|] == a": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-13",
+  "expr": "a[..i+1][..i] == a[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   27,
+   33
+  ],
+  "seeds": {
+   "a[..i+1][..i]": "fail",
+   "a[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..i+1][..i] == a[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-14",
+  "expr": "a[..|a|] == a",
+  "has_by_block": false,
+  "decl_lines": [
+   34,
+   88
+  ],
+  "seeds": {
+   "a[..|a|]": "fail"
+  },
+  "eq_seeds": {
+   "a[..|a|] == a": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-15",
+  "expr": "digits[..i+1] == digits[..i] + [digits[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   41,
+   63
+  ],
+  "seeds": {
+   "digits[..i+1]": "fail",
+   "digits[..i] + [digits[i]]": "fail",
+   "digits[..i]": "fail",
+   "digits[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "digits[..i+1] == digits[..i] + [digits[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-16",
+  "expr": "digits[..|digits|] == digits",
+  "has_by_block": false,
+  "decl_lines": [
+   41,
+   63
+  ],
+  "seeds": {
+   "digits[..|digits|]": "fail"
+  },
+  "eq_seeds": {
+   "digits[..|digits|] == digits": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-17",
+  "expr": "n == (n / a) * a + (n % a)",
+  "has_by_block": false,
+  "decl_lines": [
+   39,
+   56
+  ],
+  "seeds": {
+   "(n / a) * a + (n % a)": "pass"
+  },
+  "eq_seeds": {
+   "n == (n / a) * a + (n % a)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-18",
+  "expr": "n <= (q - 1) * a + (a - 1)",
+  "has_by_block": false,
+  "decl_lines": [
+   39,
+   56
+  ],
+  "seeds": {
+   "(q - 1) * a + (a - 1)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-19",
+  "expr": "ValidChoice(y, b, r, m, m + 1, m + 2)",
+  "has_by_block": false,
+  "decl_lines": [
+   11,
+   41
+  ],
+  "seeds": {
+   "ValidChoice(y, b, r, m, m + 1, m + 2)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 19,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-20",
+  "expr": "vs[..|vs|-1] == [v] + s[..|s|-1]",
+  "has_by_block": false,
+  "decl_lines": [
+   54,
+   70
+  ],
+  "seeds": {
+   "vs[..|vs|-1]": "fail",
+   "[v] + s[..|s|-1]": "fail",
+   "s[..|s|-1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "vs[..|vs|-1] == [v] + s[..|s|-1]": "pass"
+  },
+  "prelude_axioms": [
+   "take-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-21",
+  "expr": "counted == crossSet",
+  "has_by_block": false,
+  "decl_lines": [
+   27,
+   78
+  ],
+  "seeds": {},
+  "eq_seeds": {
+   "counted == crossSet": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-22",
+  "expr": "a[..i+1] == a[..i] + [a[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   55,
+   101
+  ],
+  "seeds": {
+   "a[..i+1]": "fail",
+   "a[..i] + [a[i]]": "fail",
+   "a[..i]": "fail",
+   "a[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..i+1] == a[..i] + [a[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-23",
+  "expr": "a[..n] == a",
+  "has_by_block": false,
+  "decl_lines": [
+   55,
+   101
+  ],
+  "seeds": {
+   "a[..n]": "fail"
+  },
+  "eq_seeds": {
+   "a[..n] == a": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-24",
+  "expr": "n * (n + 1) == (n - 2) * (n - 1) + 4 * n - 2",
+  "has_by_block": false,
+  "decl_lines": [
+   94,
+   111
+  ],
+  "seeds": {
+   "n * (n + 1)": "fail",
+   "(n + 1)": "fail",
+   "n + 1": "fail",
+   "(n - 2) * (n - 1) + 4 * n - 2": "pass"
+  },
+  "eq_seeds": {
+   "n * (n + 1) == (n - 2) * (n - 1) + 4 * n - 2": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-25",
+  "expr": "restrictions[..k+1][..k] == restrictions[..k]",
+  "has_by_block": false,
+  "decl_lines": [
+   86,
+   96
+  ],
+  "seeds": {
+   "restrictions[..k+1][..k]": "fail",
+   "restrictions[..k]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "restrictions[..k+1][..k] == restrictions[..k]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-26",
+  "expr": "restrictions[..|restrictions|] == restrictions",
+  "has_by_block": false,
+  "decl_lines": [
+   153,
+   205
+  ],
+  "seeds": {
+   "restrictions[..|restrictions|]": "fail"
+  },
+  "eq_seeds": {
+   "restrictions[..|restrictions|] == restrictions": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-27",
+  "expr": "ans[..i+1] == ans[..i] + [ans[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   206,
+   227
+  ],
+  "seeds": {
+   "ans[..i+1]": "fail",
+   "ans[..i] + [ans[i]]": "fail",
+   "ans[..i]": "fail",
+   "ans[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "ans[..i+1] == ans[..i] + [ans[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-28",
+  "expr": "ans[..n] == ans[..]",
+  "has_by_block": false,
+  "decl_lines": [
+   206,
+   227
+  ],
+  "seeds": {
+   "ans[..n]": "fail",
+   "ans[..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "ans[..n] == ans[..]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-130",
+  "expr": "(r / a + 1) * a == (r / a) * a + a",
+  "has_by_block": false,
+  "decl_lines": [
+   27,
+   39
+  ],
+  "seeds": {
+   "(r / a + 1) * a": "pass"
+  },
+  "eq_seeds": {
+   "(r / a + 1) * a == (r / a) * a + a": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-31",
+  "expr": "s[..i+1] == s[..i] + [s[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   27,
+   81
+  ],
+  "seeds": {
+   "s[..i+1]": "fail",
+   "s[..i] + [s[i]]": "fail",
+   "s[..i]": "fail",
+   "s[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s[..i+1] == s[..i] + [s[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-32",
+  "expr": "s[..|s|] == s",
+  "has_by_block": false,
+  "decl_lines": [
+   27,
+   81
+  ],
+  "seeds": {
+   "s[..|s|]": "fail"
+  },
+  "eq_seeds": {
+   "s[..|s|] == s": "pass"
+  },
+  "prelude_axioms": [
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-33",
+  "expr": "doors[..i+1][..i] == doors[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   20,
+   75
+  ],
+  "seeds": {
+   "doors[..i+1][..i]": "fail",
+   "doors[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "doors[..i+1][..i] == doors[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-34",
+  "expr": "doors[..n] == doors",
+  "has_by_block": false,
+  "decl_lines": [
+   20,
+   75
+  ],
+  "seeds": {
+   "doors[..n]": "fail"
+  },
+  "eq_seeds": {
+   "doors[..n] == doors": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-35",
+  "expr": "doors[..i+1][..i] == doors[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   20,
+   75
+  ],
+  "seeds": {
+   "doors[..i+1][..i]": "fail",
+   "doors[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "doors[..i+1][..i] == doors[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-36",
+  "expr": "CanExitAfter(doors, n)",
+  "has_by_block": false,
+  "decl_lines": [
+   20,
+   75
+  ],
+  "seeds": {
+   "CanExitAfter(doors, n)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-37",
+  "expr": "a[..i+1] == a[..i] + [a[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   196,
+   246
+  ],
+  "seeds": {
+   "a[..i+1]": "fail",
+   "a[..i] + [a[i]]": "fail",
+   "a[..i]": "fail",
+   "a[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..i+1] == a[..i] + [a[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-38",
+  "expr": "a[..|a|] == a",
+  "has_by_block": false,
+  "decl_lines": [
+   196,
+   246
+  ],
+  "seeds": {
+   "a[..|a|]": "fail"
+  },
+  "eq_seeds": {
+   "a[..|a|] == a": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-39",
+  "expr": "b[..i+1] == b[..i] + [b[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   196,
+   246
+  ],
+  "seeds": {
+   "b[..i+1]": "fail",
+   "b[..i] + [b[i]]": "fail",
+   "b[..i]": "fail",
+   "b[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "b[..i+1] == b[..i] + [b[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-40",
+  "expr": "b[..|b|] == b",
+  "has_by_block": false,
+  "decl_lines": [
+   196,
+   246
+  ],
+  "seeds": {
+   "b[..|b|]": "fail"
+  },
+  "eq_seeds": {
+   "b[..|b|] == b": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-41",
+  "expr": "s[..i+1][..i] == s[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   31,
+   82
+  ],
+  "seeds": {
+   "s[..i+1][..i]": "fail",
+   "s[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s[..i+1][..i] == s[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-42",
+  "expr": "s[..|s|] == s",
+  "has_by_block": false,
+  "decl_lines": [
+   31,
+   82
+  ],
+  "seeds": {
+   "s[..|s|]": "fail"
+  },
+  "eq_seeds": {
+   "s[..|s|] == s": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-173",
+  "expr": "s[..i+1][..i] == s[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   78,
+   95
+  ],
+  "seeds": {
+   "s[..i+1][..i]": "timeout",
+   "s[..i]": "fail",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {
+   "s[..i+1][..i] == s[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-174",
+  "expr": "s[..|s|] == s",
+  "has_by_block": false,
+  "decl_lines": [
+   78,
+   95
+  ],
+  "seeds": {
+   "s[..|s|]": "fail"
+  },
+  "eq_seeds": {
+   "s[..|s|] == s": "pass"
+  },
+  "prelude_axioms": [
+   "take-full"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-43",
+  "expr": "FriendSum(a1, a2, a3, a4, true, true, false, false) ==\n             FriendSum(a1, a2, a3, a4, false, false, true, true)",
+  "has_by_block": false,
+  "decl_lines": [
+   15,
+   48
+  ],
+  "seeds": {
+   "FriendSum(a1, a2, a3, a4, true, true, false, false)": "fail",
+   "FriendSum(a1, a2, a3, a4, false, false, true, true)": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {
+   "FriendSum(a1, a2, a3, a4, true, true, false, false) ==\n             FriendSum(a1, a2, a3, a4, false, false, true, true)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 18,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-44",
+  "expr": "FriendSum(a1, a2, a3, a4, true, false, true, false) ==\n             FriendSum(a1, a2, a3, a4, false, true, false, true)",
+  "has_by_block": false,
+  "decl_lines": [
+   15,
+   48
+  ],
+  "seeds": {
+   "FriendSum(a1, a2, a3, a4, true, false, true, false)": "fail",
+   "FriendSum(a1, a2, a3, a4, false, true, false, true)": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {
+   "FriendSum(a1, a2, a3, a4, true, false, true, false) ==\n             FriendSum(a1, a2, a3, a4, false, true, false, true)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 18,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-45",
+  "expr": "FriendSum(a1, a2, a3, a4, true, false, false, true) ==\n             FriendSum(a1, a2, a3, a4, false, true, true, false)",
+  "has_by_block": false,
+  "decl_lines": [
+   15,
+   48
+  ],
+  "seeds": {
+   "FriendSum(a1, a2, a3, a4, true, false, false, true)": "fail",
+   "FriendSum(a1, a2, a3, a4, false, true, true, false)": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {
+   "FriendSum(a1, a2, a3, a4, true, false, false, true) ==\n             FriendSum(a1, a2, a3, a4, false, true, true, false)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 18,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-46",
+  "expr": "FriendSum(a1, a2, a3, a4, false, false, false, true) ==\n             FriendSum(a1, a2, a3, a4, true, true, true, false)",
+  "has_by_block": false,
+  "decl_lines": [
+   15,
+   48
+  ],
+  "seeds": {
+   "FriendSum(a1, a2, a3, a4, false, false, false, true)": "fail",
+   "FriendSum(a1, a2, a3, a4, true, true, true, false)": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {
+   "FriendSum(a1, a2, a3, a4, false, false, false, true) ==\n             FriendSum(a1, a2, a3, a4, true, true, true, false)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 18,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-47",
+  "expr": "FriendSum(a1, a2, a3, a4, false, false, true, false) ==\n             FriendSum(a1, a2, a3, a4, true, true, false, true)",
+  "has_by_block": false,
+  "decl_lines": [
+   15,
+   48
+  ],
+  "seeds": {
+   "FriendSum(a1, a2, a3, a4, false, false, true, false)": "fail",
+   "FriendSum(a1, a2, a3, a4, true, true, false, true)": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {
+   "FriendSum(a1, a2, a3, a4, false, false, true, false) ==\n             FriendSum(a1, a2, a3, a4, true, true, false, true)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 18,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-48",
+  "expr": "FriendSum(a1, a2, a3, a4, false, true, false, false) ==\n             FriendSum(a1, a2, a3, a4, true, false, true, true)",
+  "has_by_block": false,
+  "decl_lines": [
+   15,
+   48
+  ],
+  "seeds": {
+   "FriendSum(a1, a2, a3, a4, false, true, false, false)": "fail",
+   "FriendSum(a1, a2, a3, a4, true, false, true, true)": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {
+   "FriendSum(a1, a2, a3, a4, false, true, false, false) ==\n             FriendSum(a1, a2, a3, a4, true, false, true, true)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 18,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-49",
+  "expr": "FriendSum(a1, a2, a3, a4, true, false, false, false) ==\n             FriendSum(a1, a2, a3, a4, false, true, true, true)",
+  "has_by_block": false,
+  "decl_lines": [
+   15,
+   48
+  ],
+  "seeds": {
+   "FriendSum(a1, a2, a3, a4, true, false, false, false)": "fail",
+   "FriendSum(a1, a2, a3, a4, false, true, true, true)": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {
+   "FriendSum(a1, a2, a3, a4, true, false, false, false) ==\n             FriendSum(a1, a2, a3, a4, false, true, true, true)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 18,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-50",
+  "expr": "s[..i+1][..i] == s[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   55,
+   104
+  ],
+  "seeds": {
+   "s[..i+1][..i]": "fail",
+   "s[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s[..i+1][..i] == s[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-51",
+  "expr": "s[..|s|] == s",
+  "has_by_block": false,
+  "decl_lines": [
+   55,
+   104
+  ],
+  "seeds": {
+   "s[..|s|]": "fail"
+  },
+  "eq_seeds": {
+   "s[..|s|] == s": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-52",
+  "expr": "s[..n-1] == seq(n-1, _ => 1)",
+  "has_by_block": false,
+  "decl_lines": [
+   79,
+   90
+  ],
+  "seeds": {},
+  "eq_seeds": {
+   "s[..n-1] == seq(n-1, _ => 1)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-53",
+  "expr": "s[..n-1] == seq(n-1, _ => 1)",
+  "has_by_block": false,
+  "decl_lines": [
+   91,
+   104
+  ],
+  "seeds": {},
+  "eq_seeds": {
+   "s[..n-1] == seq(n-1, _ => 1)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-54",
+  "expr": "a[..j+1][..j] == a[..j]",
+  "has_by_block": false,
+  "decl_lines": [
+   75,
+   83
+  ],
+  "seeds": {
+   "a[..j+1][..j]": "fail",
+   "a[..j]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..j+1][..j] == a[..j]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-55",
+  "expr": "a[..i+1] == a[..i] + [a[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   84,
+   140
+  ],
+  "seeds": {
+   "a[..i+1]": "fail",
+   "a[..i] + [a[i]]": "fail",
+   "a[..i]": "fail",
+   "a[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..i+1] == a[..i] + [a[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-56",
+  "expr": "CategoryRank(x + 0) == 0",
+  "has_by_block": false,
+  "decl_lines": [
+   31,
+   86
+  ],
+  "seeds": {
+   "CategoryRank(x + 0)": "pass"
+  },
+  "eq_seeds": {
+   "CategoryRank(x + 0) == 0": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-175",
+  "expr": "CategoryRank(x + 0) == 1",
+  "has_by_block": false,
+  "decl_lines": [
+   31,
+   86
+  ],
+  "seeds": {
+   "CategoryRank(x + 0)": "pass"
+  },
+  "eq_seeds": {
+   "CategoryRank(x + 0) == 1": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-176",
+  "expr": "CategoryRank(x + 0) == 2",
+  "has_by_block": false,
+  "decl_lines": [
+   31,
+   86
+  ],
+  "seeds": {
+   "CategoryRank(x + 0)": "pass"
+  },
+  "eq_seeds": {
+   "CategoryRank(x + 0) == 2": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-57",
+  "expr": "Feasible(a, b, c, rem, c2)",
+  "has_by_block": false,
+  "decl_lines": [
+   17,
+   56
+  ],
+  "seeds": {
+   "Feasible(a, b, c, rem, c2)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 27,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-58",
+  "expr": "CandiesAfterDivision(b, c, a, s) == maxCandies",
+  "has_by_block": false,
+  "decl_lines": [
+   33,
+   58
+  ],
+  "seeds": {
+   "CandiesAfterDivision(b, c, a, s)": "pass"
+  },
+  "eq_seeds": {
+   "CandiesAfterDivision(b, c, a, s) == maxCandies": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 37,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-59",
+  "expr": "CandiesAfterDivision(a, c, b, s) == maxCandies",
+  "has_by_block": false,
+  "decl_lines": [
+   33,
+   58
+  ],
+  "seeds": {
+   "CandiesAfterDivision(a, c, b, s)": "pass"
+  },
+  "eq_seeds": {
+   "CandiesAfterDivision(a, c, b, s) == maxCandies": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 37,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-60",
+  "expr": "CandiesAfterDivision(a, b, c, s) == maxCandies",
+  "has_by_block": false,
+  "decl_lines": [
+   33,
+   58
+  ],
+  "seeds": {
+   "CandiesAfterDivision(a, b, c, s)": "pass"
+  },
+  "eq_seeds": {
+   "CandiesAfterDivision(a, b, c, s) == maxCandies": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 37,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-61",
+  "expr": "events[..idx + 1][..idx] == events[..idx]",
+  "has_by_block": false,
+  "decl_lines": [
+   114,
+   181
+  ],
+  "seeds": {
+   "events[..idx + 1][..idx]": "fail",
+   "events[..idx]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "events[..idx + 1][..idx] == events[..idx]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-62",
+  "expr": "events[..idx] == events",
+  "has_by_block": false,
+  "decl_lines": [
+   114,
+   181
+  ],
+  "seeds": {
+   "events[..idx]": "fail"
+  },
+  "eq_seeds": {
+   "events[..idx] == events": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-63",
+  "expr": "s[..i+1][..i] == s[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   46,
+   53
+  ],
+  "seeds": {
+   "s[..i+1][..i]": "fail",
+   "s[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s[..i+1][..i] == s[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-64",
+  "expr": "seq(n, (i: nat) => 1)[..n-1] == seq(n-1, (i: nat) => 1)",
+  "has_by_block": false,
+  "decl_lines": [
+   54,
+   65
+  ],
+  "seeds": {},
+  "eq_seeds": {
+   "seq(n, (i: nat) => 1)[..n-1] == seq(n-1, (i: nat) => 1)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-65",
+  "expr": "seq(n, (i: nat) => 0)[..n-1] == seq(n-1, (i: nat) => 0)",
+  "has_by_block": false,
+  "decl_lines": [
+   66,
+   77
+  ],
+  "seeds": {},
+  "eq_seeds": {
+   "seq(n, (i: nat) => 0)[..n-1] == seq(n-1, (i: nat) => 0)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-66",
+  "expr": "a + b == a",
+  "has_by_block": false,
+  "decl_lines": [
+   78,
+   90
+  ],
+  "seeds": {
+   "a + b": "fail"
+  },
+  "eq_seeds": {
+   "a + b == a": "pass"
+  },
+  "prelude_axioms": [
+   "take-append",
+   "append-empty",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-67",
+  "expr": "(a + b)[..|a + b| - 1] == a + b[..|b| - 1]",
+  "has_by_block": false,
+  "decl_lines": [
+   78,
+   90
+  ],
+  "seeds": {
+   "(a + b)[..|a + b| - 1]": "fail",
+   "a + b": "fail",
+   "a + b[..|b| - 1]": "fail",
+   "b[..|b| - 1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "(a + b)[..|a + b| - 1] == a + b[..|b| - 1]": "pass"
+  },
+  "prelude_axioms": [
+   "take-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-68",
+  "expr": "s[..|s|] == s",
+  "has_by_block": false,
+  "decl_lines": [
+   130,
+   234
+  ],
+  "seeds": {
+   "s[..|s|]": "fail"
+  },
+  "eq_seeds": {
+   "s[..|s|] == s": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-69",
+  "expr": "ValidAssignment(pens, pencils, a, b, c, d, k)",
+  "has_by_block": false,
+  "decl_lines": [
+   50,
+   82
+  ],
+  "seeds": {
+   "ValidAssignment(pens, pencils, a, b, c, d, k)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 63,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-136",
+  "expr": "forall x0, y0 :: !ValidAssignment(x0, y0, a, b, c, d, k)",
+  "has_by_block": true,
+  "decl_lines": [
+   50,
+   82
+  ],
+  "seeds": {
+   "x0 + y0": "invalid",
+   "pens + pencils": "timeout"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "CF-70",
+  "expr": "a % 3 == 0",
+  "has_by_block": false,
+  "decl_lines": [
+   6,
+   17
+  ],
+  "seeds": {
+   "a % 3": "pass"
+  },
+  "eq_seeds": {
+   "a % 3 == 0": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 11,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-71",
+  "expr": "b % 2 == 0",
+  "has_by_block": false,
+  "decl_lines": [
+   6,
+   17
+  ],
+  "seeds": {
+   "b % 2": "pass"
+  },
+  "eq_seeds": {
+   "b % 2 == 0": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 11,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-72",
+  "expr": "s + [a, b] == (s + [a]) + [b]",
+  "has_by_block": false,
+  "decl_lines": [
+   43,
+   50
+  ],
+  "seeds": {
+   "s + [a, b]": "fail",
+   "(s + [a]) + [b]": "fail",
+   "(s + [a])": "fail",
+   "s + [a]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s + [a, b] == (s + [a]) + [b]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-137",
+  "expr": "sa[..|sa|-1] == s1 + [a1]",
+  "has_by_block": false,
+  "decl_lines": [
+   51,
+   62
+  ],
+  "seeds": {
+   "sa[..|sa|-1]": "timeout",
+   "s1 + [a1]": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {
+   "sa[..|sa|-1] == s1 + [a1]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-138",
+  "expr": "sb[..|sb|-1] == s2 + [b1]",
+  "has_by_block": false,
+  "decl_lines": [
+   51,
+   62
+  ],
+  "seeds": {
+   "sb[..|sb|-1]": "timeout",
+   "s2 + [b1]": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {
+   "sb[..|sb|-1] == s2 + [b1]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-73",
+  "expr": "r[..2*k] == result[..2*k]",
+  "has_by_block": false,
+  "decl_lines": [
+   72,
+   93
+  ],
+  "seeds": {
+   "r[..2*k]": "fail",
+   "result[..2*k]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "r[..2*k] == result[..2*k]": "pass"
+  },
+  "prelude_axioms": [
+   "take-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-74",
+  "expr": "r[..2*k] == r",
+  "has_by_block": false,
+  "decl_lines": [
+   72,
+   93
+  ],
+  "seeds": {
+   "r[..2*k]": "fail"
+  },
+  "eq_seeds": {
+   "r[..2*k] == r": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-append",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-75",
+  "expr": "s[..i] + [s[i], s[i + 1]] == s[..i + 2]",
+  "has_by_block": false,
+  "decl_lines": [
+   94,
+   141
+  ],
+  "seeds": {
+   "s[..i] + [s[i], s[i + 1]]": "fail",
+   "s[..i]": "fail",
+   "s[i]": "fail",
+   "s[i + 1]": "fail",
+   "s[..i + 2]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s[..i] + [s[i], s[i + 1]] == s[..i + 2]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-76",
+  "expr": "s[..|s|] == s",
+  "has_by_block": false,
+  "decl_lines": [
+   94,
+   141
+  ],
+  "seeds": {
+   "s[..|s|]": "fail"
+  },
+  "eq_seeds": {
+   "s[..|s|] == s": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-77",
+  "expr": "sentences[..|sentences|] == sentences",
+  "has_by_block": false,
+  "decl_lines": [
+   59,
+   95
+  ],
+  "seeds": {
+   "sentences[..|sentences|]": "fail"
+  },
+  "eq_seeds": {
+   "sentences[..|sentences|] == sentences": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-78",
+  "expr": "afterRemoval == EvenList(k + 1) + RangeSeq(2 * (k + 1) + 1, n)",
+  "has_by_block": false,
+  "decl_lines": [
+   81,
+   118
+  ],
+  "seeds": {
+   "EvenList(k + 1) + RangeSeq(2 * (k + 1) + 1, n)": "fail",
+   "EvenList(k + 1)": "fail",
+   "RangeSeq(2 * (k + 1) + 1, n)": "fail",
+   "(k + 1)": "fail",
+   "k + 1": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "afterRemoval == EvenList(k + 1) + RangeSeq(2 * (k + 1) + 1, n)": "pass"
+  },
+  "prelude_axioms": [
+   "append-assoc"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-79",
+  "expr": "SwapCost(a, b, la, lb) == da + db",
+  "has_by_block": false,
+  "decl_lines": [
+   44,
+   165
+  ],
+  "seeds": {
+   "SwapCost(a, b, la, lb)": "pass"
+  },
+  "eq_seeds": {
+   "SwapCost(a, b, la, lb) == da + db": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 97,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-80",
+  "expr": "SwapCost(a, b, lb, la) == da + db",
+  "has_by_block": false,
+  "decl_lines": [
+   44,
+   165
+  ],
+  "seeds": {
+   "SwapCost(a, b, lb, la)": "pass"
+  },
+  "eq_seeds": {
+   "SwapCost(a, b, lb, la) == da + db": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 97,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-81",
+  "expr": "d[0] == n % 10",
+  "has_by_block": false,
+  "decl_lines": [
+   60,
+   110
+  ],
+  "seeds": {
+   "d[0]": "pass"
+  },
+  "eq_seeds": {
+   "d[0] == n % 10": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-82",
+  "expr": "d'[i] == d[i]",
+  "has_by_block": false,
+  "decl_lines": [
+   60,
+   110
+  ],
+  "seeds": {
+   "d'[i]": "fail",
+   "d[i]": "pass"
+  },
+  "eq_seeds": {
+   "d'[i] == d[i]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-147",
+  "expr": "ValidSwapChoice(a_i, b_i, c_i, false)",
+  "has_by_block": false,
+  "decl_lines": [
+   45,
+   55
+  ],
+  "seeds": {
+   "ValidSwapChoice(a_i, b_i, c_i, false)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 49,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-148",
+  "expr": "ValidSwapChoice(a_i, b_i, c_i, true)",
+  "has_by_block": false,
+  "decl_lines": [
+   45,
+   55
+  ],
+  "seeds": {
+   "ValidSwapChoice(a_i, b_i, c_i, true)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 51,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-149",
+  "expr": "ValidSwapChoice(a[i], b[i], c[i], false)",
+  "has_by_block": false,
+  "decl_lines": [
+   65,
+   87
+  ],
+  "seeds": {
+   "ValidSwapChoice(a[i], b[i], c[i], false)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 76,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-150",
+  "expr": "ValidSwapChoice(a[i], b[i], c[i], true)",
+  "has_by_block": false,
+  "decl_lines": [
+   65,
+   87
+  ],
+  "seeds": {
+   "ValidSwapChoice(a[i], b[i], c[i], true)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 76,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-83",
+  "expr": "a[..|a|] == a",
+  "has_by_block": false,
+  "decl_lines": [
+   48,
+   73
+  ],
+  "seeds": {
+   "a[..|a|]": "fail"
+  },
+  "eq_seeds": {
+   "a[..|a|] == a": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-84",
+  "expr": "ValidStep(a, c)",
+  "has_by_block": false,
+  "decl_lines": [
+   25,
+   47
+  ],
+  "seeds": {
+   "ValidStep(a, c)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 44,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-151",
+  "expr": "(t' - q) >= 1",
+  "has_by_block": false,
+  "decl_lines": [
+   6,
+   55
+  ],
+  "seeds": {
+   "t' - q": "timeout"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "CF-85",
+  "expr": "a[..i+1] == a[..i] + [a[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   42,
+   67
+  ],
+  "seeds": {
+   "a[..i+1]": "fail",
+   "a[..i] + [a[i]]": "fail",
+   "a[..i]": "fail",
+   "a[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..i+1] == a[..i] + [a[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-86",
+  "expr": "b[..i+1] == b[..i] + [b[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   42,
+   67
+  ],
+  "seeds": {
+   "b[..i+1]": "fail",
+   "b[..i] + [b[i]]": "fail",
+   "b[..i]": "fail",
+   "b[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "b[..i+1] == b[..i] + [b[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-87",
+  "expr": "s == left + right",
+  "has_by_block": false,
+  "decl_lines": [
+   66,
+   77
+  ],
+  "seeds": {
+   "left + right": "fail"
+  },
+  "eq_seeds": {
+   "s == left + right": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-88",
+  "expr": "s == init + [s[|s| - 1]]",
+  "has_by_block": false,
+  "decl_lines": [
+   78,
+   96
+  ],
+  "seeds": {
+   "init + [s[|s| - 1]]": "fail",
+   "s[|s| - 1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s == init + [s[|s| - 1]]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-89",
+  "expr": "sorted == sorted[..i] + sorted[i..]",
+  "has_by_block": false,
+  "decl_lines": [
+   135,
+   151
+  ],
+  "seeds": {
+   "sorted[..i] + sorted[i..]": "fail",
+   "sorted[..i]": "fail",
+   "sorted[i..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "sorted == sorted[..i] + sorted[i..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-90",
+  "expr": "s[..i + 1] == s[..i] + [s[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   152,
+   173
+  ],
+  "seeds": {
+   "s[..i + 1]": "fail",
+   "s[..i] + [s[i]]": "fail",
+   "s[..i]": "fail",
+   "s[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s[..i + 1] == s[..i] + [s[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-91",
+  "expr": "s[..|s|] == s",
+  "has_by_block": false,
+  "decl_lines": [
+   152,
+   173
+  ],
+  "seeds": {
+   "s[..|s|]": "fail"
+  },
+  "eq_seeds": {
+   "s[..|s|] == s": "pass"
+  },
+  "prelude_axioms": [
+   "take-full"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-92",
+  "expr": "|x| == |a|",
+  "has_by_block": true,
+  "decl_lines": [
+   174,
+   196
+  ],
+  "seeds": {
+   "|x|": "fail",
+   "|a|": "fail",
+   "|multiset(x)|": "pass"
+  },
+  "eq_seeds": {
+   "|x| == |a|": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-93",
+  "expr": "|y| == |b|",
+  "has_by_block": true,
+  "decl_lines": [
+   174,
+   196
+  ],
+  "seeds": {
+   "|y|": "fail",
+   "|b|": "fail",
+   "|multiset(y)|": "pass"
+  },
+  "eq_seeds": {
+   "|y| == |b|": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-94",
+  "expr": "ValidDistribution(a, b, c, n, des - a, des - b, des - c)",
+  "has_by_block": false,
+  "decl_lines": [
+   16,
+   50
+  ],
+  "seeds": {
+   "ValidDistribution(a, b, c, n, des - a, des - b, des - c)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 48,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-96",
+  "expr": "Gcd(wa, wb) == wa",
+  "has_by_block": false,
+  "decl_lines": [
+   71,
+   96
+  ],
+  "seeds": {
+   "Gcd(wa, wb)": "pass"
+  },
+  "eq_seeds": {
+   "Gcd(wa, wb) == wa": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 75,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-97",
+  "expr": "exists c {:trigger grid[bottom - 1][c]} | left <= c < right :: grid[bottom - 1][c] == '*'",
+  "has_by_block": true,
+  "decl_lines": [
+   64,
+   327
+  ],
+  "seeds": {},
+  "eq_seeds": {},
+  "prelude_axioms": [
+   "take-append"
+  ],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-98",
+  "expr": "IsMinimalBoundingBox(grid, result, top, bottom, left, right)",
+  "has_by_block": false,
+  "decl_lines": [
+   64,
+   327
+  ],
+  "seeds": {
+   "IsMinimalBoundingBox(grid, result, top, bottom, left, right)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 71,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-99",
+  "expr": "a[1] == b[1]",
+  "has_by_block": false,
+  "decl_lines": [
+   11,
+   54
+  ],
+  "seeds": {
+   "a[1]": "pass"
+  },
+  "eq_seeds": {
+   "a[1] == b[1]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-101",
+  "expr": "IsValidSolution(x, y, z, a, b, c)",
+  "has_by_block": false,
+  "decl_lines": [
+   25,
+   80
+  ],
+  "seeds": {
+   "IsValidSolution(x, y, z, a, b, c)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 29,
+  "label": "INST-witness"
+ },
+ {
+  "key": "CF-102",
+  "expr": "(a + [x])[1..] == a[1..] + [x]",
+  "has_by_block": false,
+  "decl_lines": [
+   19,
+   40
+  ],
+  "seeds": {
+   "(a + [x])[1..]": "fail",
+   "a + [x]": "fail",
+   "a[1..] + [x]": "fail",
+   "a[1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "(a + [x])[1..] == a[1..] + [x]": "pass"
+  },
+  "prelude_axioms": [
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-103",
+  "expr": "(s1 + [x])[1..] == s1[1..] + [x]",
+  "has_by_block": false,
+  "decl_lines": [
+   19,
+   40
+  ],
+  "seeds": {
+   "(s1 + [x])[1..]": "fail",
+   "s1 + [x]": "fail",
+   "s1[1..] + [x]": "fail",
+   "s1[1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "(s1 + [x])[1..] == s1[1..] + [x]": "pass"
+  },
+  "prelude_axioms": [
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-104",
+  "expr": "(a + [x])[1..] == a[1..] + [x]",
+  "has_by_block": false,
+  "decl_lines": [
+   19,
+   40
+  ],
+  "seeds": {
+   "(a + [x])[1..]": "fail",
+   "a + [x]": "fail",
+   "a[1..] + [x]": "fail",
+   "a[1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "(a + [x])[1..] == a[1..] + [x]": "pass"
+  },
+  "prelude_axioms": [
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-105",
+  "expr": "(a + [x])[1..] == a[1..] + [x]",
+  "has_by_block": false,
+  "decl_lines": [
+   41,
+   60
+  ],
+  "seeds": {
+   "(a + [x])[1..]": "fail",
+   "a + [x]": "fail",
+   "a[1..] + [x]": "fail",
+   "a[1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "(a + [x])[1..] == a[1..] + [x]": "pass"
+  },
+  "prelude_axioms": [
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-106",
+  "expr": "(a + [x])[1..] == a[1..] + [x]",
+  "has_by_block": false,
+  "decl_lines": [
+   41,
+   60
+  ],
+  "seeds": {
+   "(a + [x])[1..]": "fail",
+   "a + [x]": "fail",
+   "a[1..] + [x]": "fail",
+   "a[1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "(a + [x])[1..] == a[1..] + [x]": "pass"
+  },
+  "prelude_axioms": [
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-107",
+  "expr": "(s2 + [x])[1..] == s2[1..] + [x]",
+  "has_by_block": false,
+  "decl_lines": [
+   41,
+   60
+  ],
+  "seeds": {
+   "(s2 + [x])[1..]": "fail",
+   "s2 + [x]": "fail",
+   "s2[1..] + [x]": "fail",
+   "s2[1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "(s2 + [x])[1..] == s2[1..] + [x]": "pass"
+  },
+  "prelude_axioms": [
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-108",
+  "expr": "a[..i] + [a[i]] == a[..i+1]",
+  "has_by_block": false,
+  "decl_lines": [
+   61,
+   108
+  ],
+  "seeds": {
+   "a[..i] + [a[i]]": "fail",
+   "a[..i]": "fail",
+   "a[i]": "fail",
+   "a[..i+1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..i] + [a[i]] == a[..i+1]": "pass"
+  },
+  "prelude_axioms": [
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-109",
+  "expr": "a[..i] + [a[i]] == a[..i+1]",
+  "has_by_block": false,
+  "decl_lines": [
+   61,
+   108
+  ],
+  "seeds": {
+   "a[..i] + [a[i]]": "fail",
+   "a[..i]": "fail",
+   "a[i]": "fail",
+   "a[..i+1]": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {
+   "a[..i] + [a[i]] == a[..i+1]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-append",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST",
+   "AX"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-110",
+  "expr": "a[..|a|] == a",
+  "has_by_block": false,
+  "decl_lines": [
+   61,
+   108
+  ],
+  "seeds": {
+   "a[..|a|]": "fail"
+  },
+  "eq_seeds": {
+   "a[..|a|] == a": "pass"
+  },
+  "prelude_axioms": [
+   "take-full"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-111",
+  "expr": "s2 == p",
+  "has_by_block": false,
+  "decl_lines": [
+   61,
+   108
+  ],
+  "seeds": {},
+  "eq_seeds": {
+   "s2 == p": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-112",
+  "expr": "s[..|s|] == s",
+  "has_by_block": false,
+  "decl_lines": [
+   19,
+   35
+  ],
+  "seeds": {
+   "s[..|s|]": "fail"
+  },
+  "eq_seeds": {
+   "s[..|s|] == s": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-113",
+  "expr": "s[..i + 1][..i] == s[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   19,
+   35
+  ],
+  "seeds": {
+   "s[..i + 1][..i]": "fail",
+   "s[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s[..i + 1][..i] == s[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-114",
+  "expr": "a[..i] + [a[i]] == a[..i + 1]",
+  "has_by_block": false,
+  "decl_lines": [
+   34,
+   63
+  ],
+  "seeds": {
+   "a[..i] + [a[i]]": "fail",
+   "a[..i]": "fail",
+   "a[i]": "fail",
+   "a[..i + 1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..i] + [a[i]] == a[..i + 1]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-115",
+  "expr": "a[..i] + [a[i]] == a[..i + 1]",
+  "has_by_block": false,
+  "decl_lines": [
+   34,
+   63
+  ],
+  "seeds": {
+   "a[..i] + [a[i]]": "fail",
+   "a[..i]": "pass"
+  },
+  "eq_seeds": {
+   "a[..i] + [a[i]] == a[..i + 1]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build",
+   "drop-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST",
+   "AX"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "CF-116",
+  "expr": "a[..|a|] == a",
+  "has_by_block": false,
+  "decl_lines": [
+   34,
+   63
+  ],
+  "seeds": {
+   "a[..|a|]": "fail"
+  },
+  "eq_seeds": {
+   "a[..|a|] == a": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-117",
+  "expr": "r == r[..n-1] + [r[n-1]]",
+  "has_by_block": false,
+  "decl_lines": [
+   58,
+   81
+  ],
+  "seeds": {
+   "r[..n-1] + [r[n-1]]": "fail",
+   "r[..n-1]": "fail",
+   "r[n-1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "r == r[..n-1] + [r[n-1]]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-118",
+  "expr": "s == [s[0]] + s[1..]",
+  "has_by_block": false,
+  "decl_lines": [
+   58,
+   81
+  ],
+  "seeds": {
+   "[s[0]] + s[1..]": "fail",
+   "s[0]": "fail",
+   "s[1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s == [s[0]] + s[1..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "CF-119",
+  "expr": "IsMinimalSide(a, b, val)",
+  "has_by_block": false,
+  "decl_lines": [
+   34,
+   98
+  ],
+  "seeds": {
+   "IsMinimalSide(a, b, val)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 37,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-0",
+  "expr": "q_hat[..size] == q_hat[..]",
+  "has_by_block": false,
+  "decl_lines": [
+   3,
+   32
+  ],
+  "seeds": {
+   "q_hat[..size]": "fail",
+   "q_hat[..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "q_hat[..size] == q_hat[..]": "pass"
+  },
+  "prelude_axioms": [
+   "take-full"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-17",
+  "expr": "i == |str1| ==> str1[..i] == str1",
+  "has_by_block": false,
+  "decl_lines": [
+   20,
+   130
+  ],
+  "seeds": {
+   "|str1|": "fail",
+   "str1[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "i == |str1|": "fail",
+   "str1[..i] == str1": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-256",
+  "expr": "ExistsSubstring(str1, str2)",
+  "has_by_block": true,
+  "decl_lines": [
+   131,
+   161
+  ],
+  "seeds": {
+   "ExistsSubstring(str1, str2)": "fail",
+   "|str1|": "fail",
+   "str1[offset..]": "invalid",
+   "<all>": "fail"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-257",
+  "expr": "str2 <= str1[offset..]",
+  "has_by_block": true,
+  "decl_lines": [
+   131,
+   161
+  ],
+  "seeds": {
+   "str1[offset..]": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 136,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-18",
+  "expr": "0 <= offset <= i+1 ==> (offset <= i ==> !(str2 <= str1[offset..i]))",
+  "has_by_block": false,
+  "decl_lines": [
+   273,
+   286
+  ],
+  "seeds": {
+   "i+1": "fail"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-19",
+  "expr": "a[..] == a1[..] + a2[..]",
+  "has_by_block": false,
+  "decl_lines": [
+   18,
+   74
+  ],
+  "seeds": {
+   "a[..]": "fail",
+   "a1[..] + a2[..]": "fail",
+   "a1[..]": "fail",
+   "a2[..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..] == a1[..] + a2[..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-20",
+  "expr": "a[..] == a1[..] + a2[..]",
+  "has_by_block": false,
+  "decl_lines": [
+   18,
+   74
+  ],
+  "seeds": {
+   "a[..]": "fail",
+   "a1[..] + a2[..]": "fail",
+   "a1[..]": "fail",
+   "a2[..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..] == a1[..] + a2[..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-21",
+  "expr": "b[..] == b[..i+j]",
+  "has_by_block": false,
+  "decl_lines": [
+   173,
+   186
+  ],
+  "seeds": {
+   "b[..]": "fail",
+   "b[..i+j]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "b[..] == b[..i+j]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-22",
+  "expr": "c[..] == c[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   173,
+   186
+  ],
+  "seeds": {
+   "c[..]": "fail",
+   "c[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "c[..] == c[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-full"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-23",
+  "expr": "d[..] == d[..j]",
+  "has_by_block": false,
+  "decl_lines": [
+   173,
+   186
+  ],
+  "seeds": {
+   "d[..]": "fail",
+   "d[..j]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "d[..] == d[..j]": "pass"
+  },
+  "prelude_axioms": [
+   "take-full"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-24",
+  "expr": "c[..i]+[c[i]] == c[..i+1]",
+  "has_by_block": false,
+  "decl_lines": [
+   187,
+   203
+  ],
+  "seeds": {
+   "c[..i]+[c[i]]": "fail",
+   "c[..i]": "fail",
+   "c[i]": "fail",
+   "c[..i+1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "c[..i]+[c[i]] == c[..i+1]": "pass"
+  },
+  "prelude_axioms": [
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-25",
+  "expr": "b[..i+j+1] == b[..i+j] + [b[i+j]]",
+  "has_by_block": false,
+  "decl_lines": [
+   187,
+   203
+  ],
+  "seeds": {
+   "b[..i+j+1]": "fail",
+   "b[..i+j] + [b[i+j]]": "fail",
+   "b[..i+j]": "fail",
+   "b[i+j]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "b[..i+j+1] == b[..i+j] + [b[i+j]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-26",
+  "expr": "d[..j]+[d[j]] == d[..j+1]",
+  "has_by_block": false,
+  "decl_lines": [
+   204,
+   221
+  ],
+  "seeds": {
+   "d[..j]+[d[j]]": "fail",
+   "d[..j]": "fail",
+   "d[j]": "fail",
+   "d[..j+1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "d[..j]+[d[j]] == d[..j+1]": "pass"
+  },
+  "prelude_axioms": [
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-27",
+  "expr": "b[..i+j+1] == b[..i+j] + [b[i+j]]",
+  "has_by_block": false,
+  "decl_lines": [
+   204,
+   221
+  ],
+  "seeds": {
+   "b[..i+j+1]": "fail",
+   "b[..i+j] + [b[i+j]]": "fail",
+   "b[..i+j]": "fail",
+   "b[i+j]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "b[..i+j+1] == b[..i+j] + [b[i+j]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-28",
+  "expr": "q0 == [4,8,6]",
+  "has_by_block": false,
+  "decl_lines": [
+   222,
+   241
+  ],
+  "seeds": {
+   "[4,8,6]": "fail"
+  },
+  "eq_seeds": {
+   "q0 == [4,8,6]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-29",
+  "expr": "a + b == b",
+  "has_by_block": false,
+  "decl_lines": [
+   322,
+   331
+  ],
+  "seeds": {
+   "a + b": "fail"
+  },
+  "eq_seeds": {
+   "a + b == b": "pass"
+  },
+  "prelude_axioms": [
+   "append-empty",
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-30",
+  "expr": "a + b == [a[0]] + (a[1..] + b)",
+  "has_by_block": false,
+  "decl_lines": [
+   322,
+   331
+  ],
+  "seeds": {
+   "a + b": "fail",
+   "[a[0]] + (a[1..] + b)": "fail",
+   "a[0]": "fail",
+   "(a[1..] + b)": "fail",
+   "a[1..]": "fail",
+   "a[1..] + b": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a + b == [a[0]] + (a[1..] + b)": "pass"
+  },
+  "prelude_axioms": [
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-31",
+  "expr": "b[..limit+1] == a[..k] + [key] + a[k..limit]",
+  "has_by_block": false,
+  "decl_lines": [
+   364,
+   440
+  ],
+  "seeds": {
+   "b[..limit+1]": "fail",
+   "a[..k] + [key] + a[k..limit]": "fail",
+   "a[..k]": "fail",
+   "a[k..limit]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "b[..limit+1] == a[..k] + [key] + a[k..limit]": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-32",
+  "expr": "(set i | i in grow' && i < threshold) ==\n           (set i | i in grow && i < threshold )+ if i < threshold then {i} else {}",
+  "has_by_block": false,
+  "decl_lines": [
+   1,
+   24
+  ],
+  "seeds": {},
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-34",
+  "expr": "a[..a.Length] == a[..]",
+  "has_by_block": false,
+  "decl_lines": [
+   1,
+   25
+  ],
+  "seeds": {
+   "a[..a.Length]": "fail",
+   "a[..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..a.Length] == a[..]": "pass"
+  },
+  "prelude_axioms": [
+   "take-full"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-326",
+  "expr": "s[|s|-2] == s[|s|-1]",
+  "has_by_block": false,
+  "decl_lines": [
+   21,
+   45
+  ],
+  "seeds": {
+   "s[|s|-2]": "pass"
+  },
+  "eq_seeds": {
+   "s[|s|-2] == s[|s|-1]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-35",
+  "expr": "s+t == s",
+  "has_by_block": false,
+  "decl_lines": [
+   25,
+   50
+  ],
+  "seeds": {
+   "s+t": "fail"
+  },
+  "eq_seeds": {
+   "s+t == s": "pass"
+  },
+  "prelude_axioms": [
+   "take-append",
+   "append-empty",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-36",
+  "expr": "s+t==t",
+  "has_by_block": false,
+  "decl_lines": [
+   25,
+   50
+  ],
+  "seeds": {
+   "s+t": "fail"
+  },
+  "eq_seeds": {
+   "s+t==t": "pass"
+  },
+  "prelude_axioms": [
+   "take-append",
+   "append-empty"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-260",
+  "expr": "s+t==s",
+  "has_by_block": false,
+  "decl_lines": [
+   51,
+   77
+  ],
+  "seeds": {
+   "s+t": "fail"
+  },
+  "eq_seeds": {
+   "s+t==s": "pass"
+  },
+  "prelude_axioms": [
+   "append-empty",
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-261",
+  "expr": "s+t==t",
+  "has_by_block": false,
+  "decl_lines": [
+   51,
+   77
+  ],
+  "seeds": {
+   "s+t": "fail"
+  },
+  "eq_seeds": {
+   "s+t==t": "pass"
+  },
+  "prelude_axioms": [
+   "append-empty",
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-37",
+  "expr": "s[i..j] == s[i..j-1] + [s[j-1]]",
+  "has_by_block": false,
+  "decl_lines": [
+   78,
+   116
+  ],
+  "seeds": {
+   "s[i..j]": "fail",
+   "s[i..j-1] + [s[j-1]]": "fail",
+   "s[i..j-1]": "fail",
+   "s[j-1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s[i..j] == s[i..j-1] + [s[j-1]]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-39",
+  "expr": "all_nums[|left_nums|+1..] == right_nums",
+  "has_by_block": false,
+  "decl_lines": [
+   70,
+   182
+  ],
+  "seeds": {
+   "all_nums[|left_nums|+1..]": "pass"
+  },
+  "eq_seeds": {
+   "all_nums[|left_nums|+1..] == right_nums": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST",
+   "AX"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-41",
+  "expr": "left_nums == all_nums[..|left_nums|]",
+  "has_by_block": false,
+  "decl_lines": [
+   70,
+   182
+  ],
+  "seeds": {
+   "all_nums[..|left_nums|]": "fail"
+  },
+  "eq_seeds": {
+   "left_nums == all_nums[..|left_nums|]": "pass"
+  },
+  "prelude_axioms": [
+   "take-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-283",
+  "expr": "all_nums[|left_nums|] == i",
+  "has_by_block": false,
+  "decl_lines": [
+   70,
+   182
+  ],
+  "seeds": {
+   "all_nums[|left_nums|]": "pass"
+  },
+  "eq_seeds": {
+   "all_nums[|left_nums|] == i": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-42",
+  "expr": "all_nums[|left_nums|+1..] == right_nums",
+  "has_by_block": false,
+  "decl_lines": [
+   70,
+   182
+  ],
+  "seeds": {
+   "all_nums[|left_nums|+1..]": "pass"
+  },
+  "eq_seeds": {
+   "all_nums[|left_nums|+1..] == right_nums": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST",
+   "AX"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-43",
+  "expr": "Ascending(qleft)",
+  "has_by_block": true,
+  "decl_lines": [
+   183,
+   195
+  ],
+  "seeds": {
+   "Ascending(qleft)": "fail"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-44",
+  "expr": "Ascending(qright)",
+  "has_by_block": true,
+  "decl_lines": [
+   183,
+   195
+  ],
+  "seeds": {
+   "Ascending(qright)": "fail"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-327",
+  "expr": "Exp(x) >= 0.0",
+  "has_by_block": true,
+  "decl_lines": [
+   14,
+   40
+  ],
+  "seeds": {
+   "Exp(x)": "fail"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-328",
+  "expr": "one > 0.0",
+  "has_by_block": true,
+  "decl_lines": [
+   41,
+   54
+  ],
+  "seeds": {},
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-329",
+  "expr": "one * one == one",
+  "has_by_block": true,
+  "decl_lines": [
+   41,
+   54
+  ],
+  "seeds": {
+   "one * one": "fail"
+  },
+  "eq_seeds": {
+   "one * one == one": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-303",
+  "expr": "0 == m * zp + ((n + m) % m) - (n % m)",
+  "has_by_block": false,
+  "decl_lines": [
+   53,
+   61
+  ],
+  "seeds": {
+   "m * zp + ((n + m) % m) - (n % m)": "fail",
+   "((n + m) % m)": "timeout",
+   "(n + m)": "timeout",
+   "n + m": "timeout",
+   "(n + m) % m": "timeout",
+   "(n % m)": "timeout",
+   "n % m": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {
+   "0 == m * zp + ((n + m) % m) - (n % m)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-45",
+  "expr": "(n - m) / m == a - 1 && (n - m) % m == b",
+  "has_by_block": true,
+  "decl_lines": [
+   62,
+   77
+  ],
+  "seeds": {
+   "(n - m) / m": "fail",
+   "(n - m)": "fail",
+   "n - m": "fail",
+   "a - 1": "fail",
+   "(n - m) % m": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "(n - m) / m == a - 1": "fail",
+   "(n - m) % m == b": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-46",
+  "expr": "n / m == a && n % m == b",
+  "has_by_block": true,
+  "decl_lines": [
+   62,
+   77
+  ],
+  "seeds": {
+   "n / m": "timeout",
+   "n % m": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {
+   "n / m == a": "fail",
+   "n % m == b": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-47",
+  "expr": "15 % 3 == 0",
+  "has_by_block": false,
+  "decl_lines": [
+   90,
+   126
+  ],
+  "seeds": {
+   "15 % 3": "pass"
+  },
+  "eq_seeds": {
+   "15 % 3 == 0": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 96,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-48",
+  "expr": "a[..] == [3, 5, 1]",
+  "has_by_block": false,
+  "decl_lines": [
+   52,
+   59
+  ],
+  "seeds": {
+   "a[..]": "fail",
+   "[3, 5, 1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..] == [3, 5, 1]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-50",
+  "expr": "a[..] == [1, 2, 3]",
+  "has_by_block": false,
+  "decl_lines": [
+   25,
+   32
+  ],
+  "seeds": {
+   "a[..]": "fail",
+   "[1, 2, 3]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..] == [1, 2, 3]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-52",
+  "expr": "data[data.Length -n1 +n] == s1[n1-1-n]",
+  "has_by_block": false,
+  "decl_lines": [
+   73,
+   113
+  ],
+  "seeds": {
+   "data[data.Length -n1 +n]": "fail",
+   "s1[n1-1-n]": "pass"
+  },
+  "eq_seeds": {
+   "data[data.Length -n1 +n] == s1[n1-1-n]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 99,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-53",
+  "expr": "data[data.Length -n2 +n] == s2[n2-1-n]",
+  "has_by_block": false,
+  "decl_lines": [
+   189,
+   232
+  ],
+  "seeds": {
+   "data[data.Length -n2 +n]": "fail",
+   "s2[n2-1-n]": "pass"
+  },
+  "eq_seeds": {
+   "data[data.Length -n2 +n] == s2[n2-1-n]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 212,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-54",
+  "expr": "P(0)",
+  "has_by_block": false,
+  "decl_lines": [
+   5,
+   11
+  ],
+  "seeds": {
+   "P(0)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-55",
+  "expr": "rest == rest[0..1]+rest[1..]",
+  "has_by_block": false,
+  "decl_lines": [
+   10,
+   35
+  ],
+  "seeds": {
+   "rest[0..1]+rest[1..]": "fail",
+   "rest[0..1]": "fail",
+   "rest[1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "rest == rest[0..1]+rest[1..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-56",
+  "expr": "r == r[..k]+r[k..]",
+  "has_by_block": false,
+  "decl_lines": [
+   10,
+   35
+  ],
+  "seeds": {
+   "r[..k]+r[k..]": "fail",
+   "r[..k]": "fail",
+   "r[k..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "r == r[..k]+r[k..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-57",
+  "expr": "(Seq[..i] + [Seq[i]]) == Seq[..i+1]",
+  "has_by_block": false,
+  "decl_lines": [
+   6,
+   31
+  ],
+  "seeds": {
+   "Seq[..i] + [Seq[i]]": "fail",
+   "Seq[..i]": "fail",
+   "Seq[i]": "fail",
+   "Seq[..i+1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "(Seq[..i] + [Seq[i]]) == Seq[..i+1]": "pass"
+  },
+  "prelude_axioms": [
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-58",
+  "expr": "(Seq[..|Seq|] == Seq)",
+  "has_by_block": false,
+  "decl_lines": [
+   6,
+   31
+  ],
+  "seeds": {
+   "Seq[..|Seq|]": "fail"
+  },
+  "eq_seeds": {
+   "Seq[..|Seq|] == Seq": "pass"
+  },
+  "prelude_axioms": [
+   "take-full"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-59",
+  "expr": "Seq == [Seq[0]] + Seq[1..]",
+  "has_by_block": false,
+  "decl_lines": [
+   53,
+   77
+  ],
+  "seeds": {
+   "[Seq[0]] + Seq[1..]": "fail",
+   "Seq[0]": "fail",
+   "Seq[1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "Seq == [Seq[0]] + Seq[1..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-60",
+  "expr": "a[..] + b[..] == c[..]",
+  "has_by_block": false,
+  "decl_lines": [
+   1,
+   81
+  ],
+  "seeds": {
+   "a[..] + b[..]": "fail",
+   "a[..]": "fail",
+   "b[..]": "fail",
+   "c[..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..] + b[..] == c[..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-61",
+  "expr": "isPrefixPred(str1[0..0], str2[0..])",
+  "has_by_block": false,
+  "decl_lines": [
+   130,
+   135
+  ],
+  "seeds": {
+   "isPrefixPred(str1[0..0], str2[0..])": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 132,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-62",
+  "expr": "isPrefixPred(str1[0..0],str2[0..])",
+  "has_by_block": false,
+  "decl_lines": [
+   119,
+   144
+  ],
+  "seeds": {
+   "isPrefixPred(str1[0..0],str2[0..])": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 139,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-63",
+  "expr": "r[0] in multiset(r)",
+  "has_by_block": false,
+  "decl_lines": [
+   319,
+   327
+  ],
+  "seeds": {
+   "r[0] in multiset(r)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-64",
+  "expr": "x == 2 * ((x-1)/2) + 1",
+  "has_by_block": false,
+  "decl_lines": [
+   142,
+   179
+  ],
+  "seeds": {
+   "2 * ((x-1)/2) + 1": "pass"
+  },
+  "eq_seeds": {
+   "x == 2 * ((x-1)/2) + 1": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 149,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-65",
+  "expr": "y == 2 * ((y-1)/2) + 1",
+  "has_by_block": false,
+  "decl_lines": [
+   142,
+   179
+  ],
+  "seeds": {
+   "2 * ((y-1)/2) + 1": "pass"
+  },
+  "eq_seeds": {
+   "y == 2 * ((y-1)/2) + 1": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 152,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-304",
+  "expr": "x*x*x + 3*x*x + 2*x == (x*x*x - x) + 3*(x*x + x)",
+  "has_by_block": false,
+  "decl_lines": [
+   18,
+   33
+  ],
+  "seeds": {
+   "x*x*x + 3*x*x + 2*x": "fail",
+   "(x*x*x - x) + 3*(x*x + x)": "timeout",
+   "(x*x*x - x)": "fail",
+   "x*x*x - x": "fail",
+   "(x*x + x)": "fail",
+   "x*x + x": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "x*x*x + 3*x*x + 2*x == (x*x*x - x) + 3*(x*x + x)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-66",
+  "expr": "x*x*x + 5 == (2*k+1)*(2*k+1)*(2*k+1) + 5\n                == 8*k*k*k + 12*k*k + 6*k + 6\n                == 2*(4*k*k*k + 6*k*k + 3*k + 3)",
+  "has_by_block": false,
+  "decl_lines": [
+   34,
+   47
+  ],
+  "seeds": {
+   "x*x*x + 5": "fail",
+   "(2*k+1)*(2*k+1)*(2*k+1) + 5": "fail",
+   "(2*k+1)": "fail",
+   "2*k+1": "fail",
+   "8*k*k*k + 12*k*k + 6*k + 6": "fail",
+   "2*(4*k*k*k + 6*k*k + 3*k + 3)": "fail",
+   "(4*k*k*k + 6*k*k + 3*k + 3)": "fail",
+   "4*k*k*k + 6*k*k + 3*k + 3": "fail",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-67",
+  "expr": "x*x*x == 27*k*k*k == 3*(9*k*k*k)",
+  "has_by_block": false,
+  "decl_lines": [
+   48,
+   70
+  ],
+  "seeds": {
+   "x*x*x": "fail",
+   "27*k*k*k": "fail",
+   "3*(9*k*k*k)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 51,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-68",
+  "expr": "x*x*x == 3*(9*k*k*k + 9*k*k + 3*k) + 1",
+  "has_by_block": false,
+  "decl_lines": [
+   48,
+   70
+  ],
+  "seeds": {
+   "x*x*x": "fail",
+   "3*(9*k*k*k + 9*k*k + 3*k) + 1": "pass"
+  },
+  "eq_seeds": {
+   "x*x*x == 3*(9*k*k*k + 9*k*k + 3*k) + 1": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 55,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-305",
+  "expr": "x*x*x == (3*k+2)*(3*k+2)*(3*k+2) == 27*k*k*k + 54*k*k + 36*k + 8",
+  "has_by_block": false,
+  "decl_lines": [
+   48,
+   70
+  ],
+  "seeds": {
+   "x*x*x": "timeout",
+   "(3*k+2)*(3*k+2)*(3*k+2)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-69",
+  "expr": "x*x*x == 3*(9*k*k*k + 18*k*k + 12*k + 3) - 1",
+  "has_by_block": false,
+  "decl_lines": [
+   48,
+   70
+  ],
+  "seeds": {
+   "x*x*x": "fail",
+   "3*(9*k*k*k + 18*k*k + 12*k + 3) - 1": "pass"
+  },
+  "eq_seeds": {
+   "x*x*x == 3*(9*k*k*k + 18*k*k + 12*k + 3) - 1": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 60,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-70",
+  "expr": "a[..] == [9, 4, 3, 6, 8]",
+  "has_by_block": false,
+  "decl_lines": [
+   37,
+   44
+  ],
+  "seeds": {
+   "a[..]": "fail",
+   "[9, 4, 3, 6, 8]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..] == [9, 4, 3, 6, 8]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-71",
+  "expr": "A == B'",
+  "has_by_block": false,
+  "decl_lines": [
+   3,
+   17
+  ],
+  "seeds": {},
+  "eq_seeds": {
+   "A == B'": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-74",
+  "expr": "people[(upper+1)..] == [people[upper+1]] + gu",
+  "has_by_block": false,
+  "decl_lines": [
+   63,
+   139
+  ],
+  "seeds": {
+   "people[(upper+1)..]": "fail",
+   "(upper+1)": "fail",
+   "upper+1": "fail",
+   "[people[upper+1]] + gu": "fail",
+   "people[upper+1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "people[(upper+1)..] == [people[upper+1]] + gu": "pass"
+  },
+  "prelude_axioms": [
+   "drop-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-76",
+  "expr": "people == people[..lower] + people[upper+1..]",
+  "has_by_block": false,
+  "decl_lines": [
+   63,
+   139
+  ],
+  "seeds": {
+   "people[..lower] + people[upper+1..]": "fail",
+   "people[..lower]": "fail",
+   "people[upper+1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "people == people[..lower] + people[upper+1..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-77",
+  "expr": "a + b == b",
+  "has_by_block": false,
+  "decl_lines": [
+   63,
+   83
+  ],
+  "seeds": {
+   "a + b": "fail"
+  },
+  "eq_seeds": {
+   "a + b == b": "pass"
+  },
+  "prelude_axioms": [
+   "append-empty",
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-78",
+  "expr": "(a + b)[1..] == a[1..] + b",
+  "has_by_block": false,
+  "decl_lines": [
+   63,
+   83
+  ],
+  "seeds": {
+   "(a + b)[1..]": "fail",
+   "a + b": "fail",
+   "a[1..] + b": "fail",
+   "a[1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "(a + b)[1..] == a[1..] + b": "pass"
+  },
+  "prelude_axioms": [
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-80",
+  "expr": "nums[0..i] == nums[0..i-1]+[nums[i-1]]",
+  "has_by_block": false,
+  "decl_lines": [
+   111,
+   159
+  ],
+  "seeds": {
+   "nums[0..i]": "fail",
+   "nums[0..i-1]+[nums[i-1]]": "fail",
+   "nums[0..i-1]": "fail",
+   "nums[i-1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "nums[0..i] == nums[0..i-1]+[nums[i-1]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-81",
+  "expr": "forall k: nat :: 0 <= k < i && k <= |nums| ==> rightsums[k] == sum(nums[(|nums|-k)..])",
+  "has_by_block": true,
+  "decl_lines": [
+   111,
+   159
+  ],
+  "seeds": {
+   "|nums|": "fail",
+   "rightsums[k]": "invalid",
+   "sum(nums[(|nums|-k)..])": "invalid",
+   "nums[(|nums|-k)..]": "invalid",
+   "(|nums|-k)": "invalid",
+   "|nums|-k": "invalid"
+  },
+  "eq_seeds": {
+   "rightsums[k] == sum(nums[(|nums|-k)..])": "invalid"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-330",
+  "expr": "xs == xs[0..|xs|-1] + [xs[|xs|-1]]",
+  "has_by_block": false,
+  "decl_lines": [
+   186,
+   204
+  ],
+  "seeds": {
+   "xs[0..|xs|-1] + [xs[|xs|-1]]": "timeout",
+   "xs[0..|xs|-1]": "timeout",
+   "xs[|xs|-1]": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {
+   "xs == xs[0..|xs|-1] + [xs[|xs|-1]]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-85",
+  "expr": "isPath([root], root) && pathSum([root]) == targetSum",
+  "has_by_block": false,
+  "decl_lines": [
+   44,
+   68
+  ],
+  "seeds": {
+   "isPath([root], root)": "fail",
+   "pathSum([root])": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "pathSum([root]) == targetSum": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-86",
+  "expr": "isPath([root]+p, root) && pathSum([root]+p) == targetSum",
+  "has_by_block": false,
+  "decl_lines": [
+   44,
+   68
+  ],
+  "seeds": {
+   "isPath([root]+p, root)": "pass"
+  },
+  "eq_seeds": {
+   "pathSum([root]+p) == targetSum": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 66,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-87",
+  "expr": "isPath([root]+p, root) && pathSum([root]+p) == targetSum",
+  "has_by_block": false,
+  "decl_lines": [
+   44,
+   68
+  ],
+  "seeds": {
+   "isPath([root]+p, root)": "pass"
+  },
+  "eq_seeds": {
+   "pathSum([root]+p) == targetSum": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 66,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-331",
+  "expr": "xs[k..j][s..t] == xs[k..j][s..(t-1)]+[xs[k..j][t-1]]",
+  "has_by_block": false,
+  "decl_lines": [
+   24,
+   38
+  ],
+  "seeds": {
+   "xs[k..j][s..t]": "fail",
+   "xs[k..j][s..(t-1)]+[xs[k..j][t-1]]": "fail",
+   "xs[k..j][s..(t-1)]": "fail",
+   "s..(t-1)": "invalid",
+   "xs[k..j][t-1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "xs[k..j][s..t] == xs[k..j][s..(t-1)]+[xs[k..j][t-1]]": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-332",
+  "expr": "super[..j][..t] == super[..(t)]",
+  "has_by_block": false,
+  "decl_lines": [
+   39,
+   77
+  ],
+  "seeds": {
+   "super[..j][..t]": "fail",
+   "super[..(t)]": "fail",
+   "(t)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "super[..j][..t] == super[..(t)]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "drop-full"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-333",
+  "expr": "ys == ys[..|xs|] + ys[|xs|..]",
+  "has_by_block": false,
+  "decl_lines": [
+   86,
+   92
+  ],
+  "seeds": {
+   "ys[..|xs|] + ys[|xs|..]": "pass"
+  },
+  "eq_seeds": {
+   "ys == ys[..|xs|] + ys[|xs|..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST",
+   "AX"
+  ],
+  "witness_error_line": 89,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-334",
+  "expr": "xs == [x] + xs[1..]",
+  "has_by_block": false,
+  "decl_lines": [
+   142,
+   156
+  ],
+  "seeds": {
+   "[x] + xs[1..]": "fail",
+   "xs[1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "xs == [x] + xs[1..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-335",
+  "expr": "xs + ys == ys",
+  "has_by_block": false,
+  "decl_lines": [
+   178,
+   189
+  ],
+  "seeds": {
+   "xs + ys": "fail"
+  },
+  "eq_seeds": {
+   "xs + ys == ys": "pass"
+  },
+  "prelude_axioms": [
+   "append-empty",
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-336",
+  "expr": "xs + ys == [xs[0]] + (xs[1..] + ys)",
+  "has_by_block": false,
+  "decl_lines": [
+   178,
+   189
+  ],
+  "seeds": {
+   "xs + ys": "fail",
+   "[xs[0]] + (xs[1..] + ys)": "fail",
+   "xs[0]": "fail",
+   "(xs[1..] + ys)": "fail",
+   "xs[1..]": "fail",
+   "xs[1..] + ys": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "xs + ys == [xs[0]] + (xs[1..] + ys)": "pass"
+  },
+  "prelude_axioms": [
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-337",
+  "expr": "xs == xs[0..|xs|-1] + [xs[|xs|-1]]",
+  "has_by_block": false,
+  "decl_lines": [
+   190,
+   207
+  ],
+  "seeds": {
+   "xs[0..|xs|-1] + [xs[|xs|-1]]": "timeout",
+   "xs[0..|xs|-1]": "timeout",
+   "xs[|xs|-1]": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {
+   "xs == xs[0..|xs|-1] + [xs[|xs|-1]]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-338",
+  "expr": "list == list[..k]+[item]+list[k+1..]",
+  "has_by_block": false,
+  "decl_lines": [
+   319,
+   329
+  ],
+  "seeds": {
+   "list[..k]+[item]+list[k+1..]": "fail",
+   "list[..k]": "fail",
+   "list[k+1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "list == list[..k]+[item]+list[k+1..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-339",
+  "expr": "list == list[..x] + [item] + list[(x+1)..y] + [item] + list[y+1..]",
+  "has_by_block": false,
+  "decl_lines": [
+   344,
+   354
+  ],
+  "seeds": {
+   "list[..x] + [item] + list[(x+1)..y] + [item] + list[y+1..]": "fail",
+   "list[..x]": "fail",
+   "list[(x+1)..y]": "fail",
+   "(x+1)": "fail",
+   "x+1": "fail",
+   "list[y+1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "list == list[..x] + [item] + list[(x+1)..y] + [item] + list[y+1..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-340",
+  "expr": "multiset(list)[item] > 1",
+  "has_by_block": false,
+  "decl_lines": [
+   344,
+   354
+  ],
+  "seeds": {
+   "multiset(list)[item]": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 347,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-341",
+  "expr": "list == list[..x] + [item] + list[x+1..]",
+  "has_by_block": false,
+  "decl_lines": [
+   355,
+   364
+  ],
+  "seeds": {
+   "list[..x] + [item] + list[x+1..]": "fail",
+   "list[..x]": "fail",
+   "list[x+1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "list == list[..x] + [item] + list[x+1..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-342",
+  "expr": "items == items[..i]+items[i..]",
+  "has_by_block": false,
+  "decl_lines": [
+   365,
+   385
+  ],
+  "seeds": {
+   "items[..i]+items[i..]": "fail",
+   "items[..i]": "fail",
+   "items[i..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "items == items[..i]+items[i..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-343",
+  "expr": "multiset(itemsPlus)[item] > 1",
+  "has_by_block": false,
+  "decl_lines": [
+   365,
+   385
+  ],
+  "seeds": {
+   "multiset(itemsPlus)[item]": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 382,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-344",
+  "expr": "x in list",
+  "has_by_block": false,
+  "decl_lines": [
+   386,
+   426
+  ],
+  "seeds": {
+   "x in list": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-345",
+  "expr": "list == list[..i] + [x] + list[i+1..]",
+  "has_by_block": false,
+  "decl_lines": [
+   386,
+   426
+  ],
+  "seeds": {
+   "list[..i] + [x] + list[i+1..]": "fail",
+   "list[..i]": "fail",
+   "list[i+1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "list == list[..i] + [x] + list[i+1..]": "pass"
+  },
+  "prelude_axioms": [
+   "drop-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-346",
+  "expr": "|items-{x}| == 0",
+  "has_by_block": false,
+  "decl_lines": [
+   386,
+   426
+  ],
+  "seeds": {
+   "|items-{x}|": "pass"
+  },
+  "eq_seeds": {
+   "|items-{x}| == 0": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-347",
+  "expr": "list[0] in list",
+  "has_by_block": false,
+  "decl_lines": [
+   386,
+   426
+  ],
+  "seeds": {
+   "list[0] in list": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-348",
+  "expr": "list[1] in list",
+  "has_by_block": false,
+  "decl_lines": [
+   386,
+   426
+  ],
+  "seeds": {
+   "list[1] in list": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-349",
+  "expr": "multiset(list)[item] > 1",
+  "has_by_block": false,
+  "decl_lines": [
+   386,
+   426
+  ],
+  "seeds": {
+   "multiset(list)[item]": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 418,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-350",
+  "expr": "x in list",
+  "has_by_block": false,
+  "decl_lines": [
+   427,
+   459
+  ],
+  "seeds": {
+   "x in list": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-351",
+  "expr": "list == list[..i] + [x] + list[i+1..]",
+  "has_by_block": false,
+  "decl_lines": [
+   427,
+   459
+  ],
+  "seeds": {
+   "list[..i] + [x] + list[i+1..]": "fail",
+   "list[..i]": "fail",
+   "list[i+1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "list == list[..i] + [x] + list[i+1..]": "pass"
+  },
+  "prelude_axioms": [
+   "drop-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-352",
+  "expr": "IsSuffix(s1,t1)",
+  "has_by_block": false,
+  "decl_lines": [
+   481,
+   492
+  ],
+  "seeds": {
+   "IsSuffix(s1,t1)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 487,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-353",
+  "expr": "(b[0..|b|-1] == a[0..i])",
+  "has_by_block": false,
+  "decl_lines": [
+   28,
+   44
+  ],
+  "seeds": {
+   "b[0..|b|-1]": "fail",
+   "a[0..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "b[0..|b|-1] == a[0..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-92",
+  "expr": "A[i] <= r <= A[j]",
+  "has_by_block": false,
+  "decl_lines": [
+   47,
+   108
+  ],
+  "seeds": {
+   "A[i]": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 64,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-306",
+  "expr": "c <= x",
+  "has_by_block": true,
+  "decl_lines": [
+   40,
+   154
+  ],
+  "seeds": {},
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-99",
+  "expr": "f(a, f(b, c)) <= x",
+  "has_by_block": true,
+  "decl_lines": [
+   40,
+   154
+  ],
+  "seeds": {
+   "f(a, f(b, c))": "fail",
+   "f(b, c)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-101",
+  "expr": "forall n {:induction} :: 0 <= n ==> !LowerThan(SkinnyTree().children, n)",
+  "has_by_block": false,
+  "decl_lines": [
+   119,
+   126
+  ],
+  "seeds": {
+   "!LowerThan(SkinnyTree().children, n)": "invalid",
+   "LowerThan(SkinnyTree().children, n)": "invalid",
+   "SkinnyTree()": "fail"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-307",
+  "expr": "s - {y} - {x} == s - {x} - {y}",
+  "has_by_block": false,
+  "decl_lines": [
+   106,
+   133
+  ],
+  "seeds": {
+   "s - {y} - {x}": "timeout",
+   "s - {x} - {y}": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {
+   "s - {y} - {x} == s - {x} - {y}": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-354",
+  "expr": "y in (s - {x})",
+  "has_by_block": false,
+  "decl_lines": [
+   106,
+   133
+  ],
+  "seeds": {
+   "y in (s - {x})": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-104",
+  "expr": "y in s'",
+  "has_by_block": false,
+  "decl_lines": [
+   197,
+   219
+  ],
+  "seeds": {
+   "y in s'": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-106",
+  "expr": "s1 + s2 == s1",
+  "has_by_block": false,
+  "decl_lines": [
+   62,
+   75
+  ],
+  "seeds": {
+   "s1 + s2": "fail"
+  },
+  "eq_seeds": {
+   "s1 + s2 == s1": "pass"
+  },
+  "prelude_axioms": [
+   "append-empty"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-107",
+  "expr": "bits(n0)[..i] == bits(n0)",
+  "has_by_block": false,
+  "decl_lines": [
+   76,
+   126
+  ],
+  "seeds": {
+   "bits(n0)[..i]": "fail",
+   "bits(n0)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "bits(n0)[..i] == bits(n0)": "pass"
+  },
+  "prelude_axioms": [
+   "take-full"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-108",
+  "expr": "contains(i, i.lo)",
+  "has_by_block": false,
+  "decl_lines": [
+   28,
+   38
+  ],
+  "seeds": {
+   "contains(i, i.lo)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 33,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-109",
+  "expr": "contains(i2, i1.lo)",
+  "has_by_block": false,
+  "decl_lines": [
+   73,
+   85
+  ],
+  "seeds": {
+   "contains(i2, i1.lo)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 77,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-110",
+  "expr": "contains(i1, i2.lo)",
+  "has_by_block": false,
+  "decl_lines": [
+   73,
+   85
+  ],
+  "seeds": {
+   "contains(i1, i2.lo)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 79,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-111",
+  "expr": "forall n: nat | n < |e|-1  :: NextStep(e[n], e[n+1], steps[n])",
+  "has_by_block": false,
+  "decl_lines": [
+   87,
+   109
+  ],
+  "seeds": {},
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-112",
+  "expr": "ev_SS(ev_SS(ev_0)).apply() == 4",
+  "has_by_block": false,
+  "decl_lines": [
+   52,
+   54
+  ],
+  "seeds": {
+   "ev_SS(ev_SS(ev_0)).apply()": "pass"
+  },
+  "eq_seeds": {
+   "ev_SS(ev_SS(ev_0)).apply() == 4": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 52,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-113",
+  "expr": "r.ev_SS? && r.r.apply() == 1",
+  "has_by_block": false,
+  "decl_lines": [
+   55,
+   59
+  ],
+  "seeds": {
+   "r.ev_SS?": "fail",
+   "r.r.apply()": "pass"
+  },
+  "eq_seeds": {
+   "r.r.apply() == 1": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 56,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-114",
+  "expr": "ev_SS(r).apply() == n + 2",
+  "has_by_block": false,
+  "decl_lines": [
+   60,
+   63
+  ],
+  "seeds": {
+   "ev_SS(r).apply()": "pass"
+  },
+  "eq_seeds": {
+   "ev_SS(r).apply() == n + 2": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 60,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-115",
+  "expr": "r.ev_SS? && r.r.apply() == n",
+  "has_by_block": false,
+  "decl_lines": [
+   64,
+   70
+  ],
+  "seeds": {
+   "r.ev_SS?": "fail",
+   "r.r.apply()": "pass"
+  },
+  "eq_seeds": {
+   "r.r.apply() == n": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 64,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-116",
+  "expr": "ev(2)",
+  "has_by_block": false,
+  "decl_lines": [
+   82,
+   84
+  ],
+  "seeds": {
+   "ev(2)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-117",
+  "expr": "Ev(cex)",
+  "has_by_block": false,
+  "decl_lines": [
+   85,
+   90
+  ],
+  "seeds": {
+   "Ev(cex)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-118",
+  "expr": "Ev(cex)",
+  "has_by_block": false,
+  "decl_lines": [
+   92,
+   102
+  ],
+  "seeds": {
+   "Ev(cex)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-119",
+  "expr": "ev_0.apply() == 0",
+  "has_by_block": false,
+  "decl_lines": [
+   103,
+   111
+  ],
+  "seeds": {
+   "ev_0.apply()": "pass"
+  },
+  "eq_seeds": {
+   "ev_0.apply() == 0": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 104,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-120",
+  "expr": "ev_SS(r).apply() == n",
+  "has_by_block": false,
+  "decl_lines": [
+   103,
+   111
+  ],
+  "seeds": {
+   "ev_SS(r).apply()": "pass"
+  },
+  "eq_seeds": {
+   "ev_SS(r).apply() == n": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 106,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-121",
+  "expr": "r.r.apply() == n - 2",
+  "has_by_block": false,
+  "decl_lines": [
+   112,
+   118
+  ],
+  "seeds": {
+   "r.r.apply()": "pass"
+  },
+  "eq_seeds": {
+   "r.r.apply() == n - 2": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 116,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-122",
+  "expr": "Ev(cex)",
+  "has_by_block": false,
+  "decl_lines": [
+   119,
+   131
+  ],
+  "seeds": {
+   "Ev(cex)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-355",
+  "expr": "expo(2, (3 * i) - 2) == expo(2, (3 * i)) / expo(2, 2)",
+  "has_by_block": false,
+  "decl_lines": [
+   9,
+   47
+  ],
+  "seeds": {
+   "expo(2, (3 * i) - 2)": "pass"
+  },
+  "eq_seeds": {
+   "expo(2, (3 * i) - 2) == expo(2, (3 * i)) / expo(2, 2)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-123",
+  "expr": "(n-1)*(n-2) == n*n -3*n + 2",
+  "has_by_block": false,
+  "decl_lines": [
+   1,
+   12
+  ],
+  "seeds": {
+   "(n-1)*(n-2)": "pass"
+  },
+  "eq_seeds": {
+   "(n-1)*(n-2) == n*n -3*n + 2": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-124",
+  "expr": "below == belowminus + {bound-1}",
+  "has_by_block": false,
+  "decl_lines": [
+   3,
+   17
+  ],
+  "seeds": {
+   "belowminus + {bound-1}": "fail"
+  },
+  "eq_seeds": {
+   "below == belowminus + {bound-1}": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-125",
+  "expr": "forall i:: 0 <= i < nelems ==> old(store[i]) == store[i]",
+  "has_by_block": false,
+  "decl_lines": [
+   58,
+   73
+  ],
+  "seeds": {},
+  "eq_seeds": {
+   "old(store[i]) == store[i]": "invalid"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-126",
+  "expr": "forall i:: 0 <= i < nelems ==> old(store[i]) == store[i]",
+  "has_by_block": false,
+  "decl_lines": [
+   160,
+   177
+  ],
+  "seeds": {},
+  "eq_seeds": {
+   "old(store[i]) == store[i]": "invalid"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-127",
+  "expr": "forall i:: 0 <= i < nelems ==> old(store[i]) == store[i]",
+  "has_by_block": false,
+  "decl_lines": [
+   393,
+   426
+  ],
+  "seeds": {},
+  "eq_seeds": {
+   "old(store[i]) == store[i]": "invalid"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-356",
+  "expr": "q[0] <= q[1] <= q[2] <= q[3] < 10",
+  "has_by_block": false,
+  "decl_lines": [
+   1,
+   140
+  ],
+  "seeds": {
+   "q[0]": "fail",
+   "q[1]": "fail",
+   "q[2]": "fail",
+   "q[3]": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-357",
+  "expr": "q[4] == q[5] == q[6] == 10",
+  "has_by_block": false,
+  "decl_lines": [
+   1,
+   140
+  ],
+  "seeds": {
+   "q[4]": "fail",
+   "q[5]": "fail",
+   "q[6]": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-358",
+  "expr": "10 < q[7]",
+  "has_by_block": false,
+  "decl_lines": [
+   1,
+   140
+  ],
+  "seeds": {
+   "q[7]": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-129",
+  "expr": "HasAddends(q,10)",
+  "has_by_block": true,
+  "decl_lines": [
+   1,
+   19
+  ],
+  "seeds": {
+   "HasAddends(q,10)": "fail",
+   "q[2]+q[4]": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 6,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-309",
+  "expr": "HasAddends(q,10)",
+  "has_by_block": true,
+  "decl_lines": [
+   1,
+   19
+  ],
+  "seeds": {
+   "HasAddends(q,10)": "fail",
+   "q[2]+q[4]": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 5,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-130",
+  "expr": "q[i..j] < q[i..(j + 1)]",
+  "has_by_block": false,
+  "decl_lines": [
+   88,
+   98
+  ],
+  "seeds": {
+   "q[i..j]": "fail",
+   "q[i..(j + 1)]": "fail",
+   "i..(j + 1)": "invalid",
+   "<all>": "fail"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-359",
+  "expr": "(a[0] == 1)",
+  "has_by_block": false,
+  "decl_lines": [
+   2,
+   34
+  ],
+  "seeds": {
+   "a[0]": "pass"
+  },
+  "eq_seeds": {
+   "a[0] == 1": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-360",
+  "expr": "(a[1] == 0 && a[2] == 0)",
+  "has_by_block": false,
+  "decl_lines": [
+   2,
+   34
+  ],
+  "seeds": {
+   "a[1]": "fail",
+   "a[2]": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 28,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-131",
+  "expr": "[a][0] == a",
+  "has_by_block": false,
+  "decl_lines": [
+   6,
+   14
+  ],
+  "seeds": {
+   "[a][0]": "pass"
+  },
+  "eq_seeds": {
+   "[a][0] == a": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-132",
+  "expr": "Even(4)",
+  "has_by_block": false,
+  "decl_lines": [
+   22,
+   42
+  ],
+  "seeds": {
+   "Even(4)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-133",
+  "expr": "forall i | 1 <= i <= |s| :: s'_new[i * 2] == s'_old[(i-1) * 2]",
+  "has_by_block": false,
+  "decl_lines": [
+   199,
+   213
+  ],
+  "seeds": {},
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-134",
+  "expr": "s'[c1+r2'] == s'[c2-r2']",
+  "has_by_block": true,
+  "decl_lines": [
+   277,
+   320
+  ],
+  "seeds": {
+   "s'[c1+r2']": "fail",
+   "s'[c2-r2']": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s'[c1+r2'] == s'[c2-r2']": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-135",
+  "expr": "s'[c1-r2'] == s'[c2+r2']",
+  "has_by_block": true,
+  "decl_lines": [
+   277,
+   320
+  ],
+  "seeds": {
+   "s'[c1-r2']": "fail",
+   "s'[c2+r2']": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s'[c1-r2'] == s'[c2+r2']": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-136",
+  "expr": "s'[c1-r2'] == s'[c1+r2']",
+  "has_by_block": true,
+  "decl_lines": [
+   277,
+   320
+  ],
+  "seeds": {
+   "s'[c1-r2']": "fail",
+   "s'[c1+r2']": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s'[c1-r2'] == s'[c1+r2']": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-137",
+  "expr": "s'[c1+r2'] == s'[c2-r2']",
+  "has_by_block": true,
+  "decl_lines": [
+   277,
+   320
+  ],
+  "seeds": {
+   "s'[c1+r2']": "fail",
+   "s'[c2-r2']": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s'[c1+r2'] == s'[c2-r2']": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-138",
+  "expr": "s'[c1-r2'] == s'[c2+r2']",
+  "has_by_block": true,
+  "decl_lines": [
+   277,
+   320
+  ],
+  "seeds": {
+   "s'[c1-r2']": "fail",
+   "s'[c2+r2']": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s'[c1-r2'] == s'[c2+r2']": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-139",
+  "expr": "s'[c1-r2'] != s'[c1+r2']",
+  "has_by_block": true,
+  "decl_lines": [
+   277,
+   320
+  ],
+  "seeds": {
+   "s'[c1-r2']": "fail",
+   "s'[c1+r2']": "fail",
+   "!palindromic_radius(s', c1, r2')": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-310",
+  "expr": "s'[c1-r2'] != s'[c1+r2']",
+  "has_by_block": true,
+  "decl_lines": [
+   277,
+   320
+  ],
+  "seeds": {
+   "s'[c1-r2']": "fail",
+   "s'[c1+r2']": "fail",
+   "!palindromic_radius(s', c1, r2')": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-140",
+  "expr": "s'[c1+r2'] == s'[c2-r2']",
+  "has_by_block": true,
+  "decl_lines": [
+   277,
+   320
+  ],
+  "seeds": {
+   "s'[c1+r2']": "fail",
+   "s'[c2-r2']": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s'[c1+r2'] == s'[c2-r2']": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-141",
+  "expr": "s'[c1-r2'] == s'[c2+r2']",
+  "has_by_block": true,
+  "decl_lines": [
+   277,
+   320
+  ],
+  "seeds": {
+   "s'[c1-r2']": "fail",
+   "s'[c2+r2']": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s'[c1-r2'] == s'[c2+r2']": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-142",
+  "expr": "s'[c1-r2'] == s'[c1+r2']",
+  "has_by_block": true,
+  "decl_lines": [
+   277,
+   320
+  ],
+  "seeds": {
+   "s'[c1-r2']": "fail",
+   "s'[c1+r2']": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s'[c1-r2'] == s'[c1+r2']": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-143",
+  "expr": "s'[c1+r2'] == s'[c2-r2']",
+  "has_by_block": true,
+  "decl_lines": [
+   277,
+   320
+  ],
+  "seeds": {
+   "s'[c1+r2']": "fail",
+   "s'[c2-r2']": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s'[c1+r2'] == s'[c2-r2']": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-144",
+  "expr": "s'[c1-r2'] == s'[c1+r2']",
+  "has_by_block": true,
+  "decl_lines": [
+   277,
+   320
+  ],
+  "seeds": {
+   "s'[c1-r2']": "fail",
+   "s'[c1+r2']": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s'[c1-r2'] == s'[c1+r2']": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-145",
+  "expr": "max_interval_for_same_center(s, k, (k - radii[k]) / 2, (k + radii[k]) / 2)",
+  "has_by_block": false,
+  "decl_lines": [
+   326,
+   362
+  ],
+  "seeds": {
+   "max_interval_for_same_center(s, k, (k - radii[k]) / 2, (k + radii[k]) / 2)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-146",
+  "expr": "s[i] == s[j]",
+  "has_by_block": true,
+  "decl_lines": [
+   371,
+   405
+  ],
+  "seeds": {
+   "s[i]": "fail",
+   "s[j]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s[i] == s[j]": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-147",
+  "expr": "palindromic_radius(s', lo + hi, hi' - lo' - 1)",
+  "has_by_block": false,
+  "decl_lines": [
+   371,
+   405
+  ],
+  "seeds": {
+   "palindromic_radius(s', lo + hi, hi' - lo' - 1)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-148",
+  "expr": "left == (left / 2) * 2",
+  "has_by_block": false,
+  "decl_lines": [
+   406,
+   418
+  ],
+  "seeds": {
+   "(left / 2) * 2": "fail",
+   "(left / 2)": "fail",
+   "left / 2": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "left == (left / 2) * 2": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-149",
+  "expr": "right == (right / 2) * 2",
+  "has_by_block": false,
+  "decl_lines": [
+   406,
+   418
+  ],
+  "seeds": {
+   "(right / 2) * 2": "fail",
+   "(right / 2)": "fail",
+   "right / 2": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "right == (right / 2) * 2": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-150",
+  "expr": "haystack[0..] == haystack",
+  "has_by_block": false,
+  "decl_lines": [
+   27,
+   42
+  ],
+  "seeds": {
+   "haystack[0..]": "pass"
+  },
+  "eq_seeds": {
+   "haystack[0..] == haystack": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": false
+  },
+  "categories": [
+   "INST",
+   "AX"
+  ],
+  "witness_error_line": 35,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-151",
+  "expr": "forall i :: 1 <= i <= |haystack| ==> haystack[i..] == haystack[1..][(i-1)..]",
+  "has_by_block": false,
+  "decl_lines": [
+   27,
+   42
+  ],
+  "seeds": {
+   "haystack[i..]": "invalid",
+   "haystack[1..][(i-1)..]": "invalid",
+   "(i-1)": "invalid",
+   "i-1": "invalid"
+  },
+  "eq_seeds": {
+   "haystack[i..] == haystack[1..][(i-1)..]": "invalid"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-152",
+  "expr": "xs[..i+1] == xs[..i] + [xs[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   7,
+   22
+  ],
+  "seeds": {
+   "xs[..i+1]": "fail",
+   "xs[..i] + [xs[i]]": "fail",
+   "xs[..i]": "fail",
+   "xs[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "xs[..i+1] == xs[..i] + [xs[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-153",
+  "expr": "xs[..] == xs[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   7,
+   22
+  ],
+  "seeds": {
+   "xs[..]": "fail",
+   "xs[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "xs[..] == xs[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-154",
+  "expr": "xs[..i+1] == xs[..i] + [xs[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   11,
+   49
+  ],
+  "seeds": {
+   "xs[..i+1]": "fail",
+   "xs[..i] + [xs[i]]": "fail",
+   "xs[..i]": "fail",
+   "xs[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "xs[..i+1] == xs[..i] + [xs[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-155",
+  "expr": "xs[..i+1] == xs[..i] + [xs[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   11,
+   49
+  ],
+  "seeds": {
+   "xs[..i+1]": "fail",
+   "xs[..i] + [xs[i]]": "fail",
+   "xs[..i]": "fail",
+   "xs[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "xs[..i+1] == xs[..i] + [xs[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-156",
+  "expr": "xs[..] == xs[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   11,
+   49
+  ],
+  "seeds": {
+   "xs[..]": "fail",
+   "xs[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "xs[..] == xs[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-157",
+  "expr": "a[0] == 'c' && a[1] == 'h' && a[2] == 'e'",
+  "has_by_block": false,
+  "decl_lines": [
+   18,
+   34
+  ],
+  "seeds": {
+   "a[0]": "fail",
+   "a[1]": "fail",
+   "a[2]": "pass"
+  },
+  "eq_seeds": {
+   "a[0] == 'c'": "fail",
+   "a[1] == 'h'": "fail",
+   "a[2] == 'e'": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-158",
+  "expr": "a[0] == 'e'",
+  "has_by_block": false,
+  "decl_lines": [
+   18,
+   34
+  ],
+  "seeds": {
+   "a[0]": "pass"
+  },
+  "eq_seeds": {
+   "a[0] == 'e'": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-159",
+  "expr": "arr[0] == -11 && arr[1] == 2 && arr[2] == 42 && arr[3] == -4",
+  "has_by_block": false,
+  "decl_lines": [
+   20,
+   27
+  ],
+  "seeds": {
+   "arr[0]": "fail",
+   "arr[1]": "fail",
+   "arr[2]": "pass"
+  },
+  "eq_seeds": {
+   "arr[0] == -11": "fail",
+   "arr[1] == 2": "fail",
+   "arr[2] == 42": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-160",
+  "expr": "arr[2] == 2",
+  "has_by_block": false,
+  "decl_lines": [
+   10,
+   26
+  ],
+  "seeds": {
+   "arr[2]": "pass"
+  },
+  "eq_seeds": {
+   "arr[2] == 2": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-161",
+  "expr": "a[0] == a[1] == a[2] == 42",
+  "has_by_block": false,
+  "decl_lines": [
+   31,
+   69
+  ],
+  "seeds": {
+   "a[0]": "fail",
+   "a[1]": "fail",
+   "a[2]": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-162",
+  "expr": "a[0] == 0 && a[1] == a[2] == a[3] == 42",
+  "has_by_block": false,
+  "decl_lines": [
+   31,
+   69
+  ],
+  "seeds": {
+   "a[0]": "fail",
+   "a[1]": "fail",
+   "a[2]": "fail",
+   "a[3]": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {
+   "a[0] == 0": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-163",
+  "expr": "a[0] == a[1] == a[5] == 0 && a[2] == a[3] == a[4] == 42",
+  "has_by_block": false,
+  "decl_lines": [
+   31,
+   69
+  ],
+  "seeds": {
+   "a[0]": "fail",
+   "a[1]": "fail",
+   "a[5]": "fail",
+   "a[2]": "fail",
+   "a[3]": "fail",
+   "a[4]": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-164",
+  "expr": "forall j | 0 <= j < i :: nums_before[j] in nums[..last]",
+  "has_by_block": false,
+  "decl_lines": [
+   2,
+   41
+  ],
+  "seeds": {},
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-165",
+  "expr": "nx != null ==>\n          forall i | 0 <= i < |nx.list| ::\n              current.list[i + 1] == nx.list[i]",
+  "has_by_block": false,
+  "decl_lines": [
+   61,
+   112
+  ],
+  "seeds": {},
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-166",
+  "expr": "current.data == current.list[0]",
+  "has_by_block": false,
+  "decl_lines": [
+   61,
+   112
+  ],
+  "seeds": {
+   "current.list[0]": "pass"
+  },
+  "eq_seeds": {
+   "current.data == current.list[0]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-167",
+  "expr": "In(hd, i) != 0",
+  "has_by_block": false,
+  "decl_lines": [
+   62,
+   129
+  ],
+  "seeds": {
+   "In(hd, i)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-168",
+  "expr": "forall y :: In(y, lo) <= In(y, i)",
+  "has_by_block": false,
+  "decl_lines": [
+   62,
+   129
+  ],
+  "seeds": {},
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-311",
+  "expr": "0 in BitSet(m) && 0 !in BitSet(n)",
+  "has_by_block": false,
+  "decl_lines": [
+   114,
+   145
+  ],
+  "seeds": {
+   "0 in BitSet(m)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-312",
+  "expr": "0 !in BitSet(m) ==> BitSet(m) == BitSet(m) - {0}",
+  "has_by_block": false,
+  "decl_lines": [
+   114,
+   145
+  ],
+  "seeds": {
+   "0 !in BitSet(m)": "fail",
+   "BitSet(m)": "fail",
+   "BitSet(m) - {0}": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "BitSet(m) == BitSet(m) - {0}": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-169",
+  "expr": "0 in BitSet(n) ==> BitSet(n) - {0} <= BitSet(n)",
+  "has_by_block": false,
+  "decl_lines": [
+   114,
+   145
+  ],
+  "seeds": {
+   "0 in BitSet(n)": "fail",
+   "BitSet(n)": "fail",
+   "BitSet(n) - {0}": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-170",
+  "expr": "w >= 0",
+  "has_by_block": false,
+  "decl_lines": [
+   152,
+   222
+  ],
+  "seeds": {},
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-171",
+  "expr": "a[..i+1][..i] == a[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   1,
+   27
+  ],
+  "seeds": {
+   "a[..i+1][..i]": "fail",
+   "a[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..i+1][..i] == a[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-172",
+  "expr": "a[..a.Length] == a[..]",
+  "has_by_block": false,
+  "decl_lines": [
+   1,
+   27
+  ],
+  "seeds": {
+   "a[..a.Length]": "fail",
+   "a[..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..a.Length] == a[..]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-361",
+  "expr": "s - {x} - {y} == s - {y} - {x}",
+  "has_by_block": false,
+  "decl_lines": [
+   33,
+   55
+  ],
+  "seeds": {
+   "s - {x} - {y}": "fail",
+   "s - {y} - {x}": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s - {x} - {y} == s - {y} - {x}": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-173",
+  "expr": "a[..i+1][..i] == a[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   1,
+   27
+  ],
+  "seeds": {
+   "a[..i+1][..i]": "fail",
+   "a[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..i+1][..i] == a[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-174",
+  "expr": "a[..a.Length] == a[..]",
+  "has_by_block": false,
+  "decl_lines": [
+   1,
+   27
+  ],
+  "seeds": {
+   "a[..a.Length]": "fail",
+   "a[..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..a.Length] == a[..]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-175",
+  "expr": "forall k :: 0 <= k < v && s[k] != v ==> k in s",
+  "has_by_block": false,
+  "decl_lines": [
+   1,
+   28
+  ],
+  "seeds": {
+   "s[k]": "invalid",
+   "k in s": "invalid"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-176",
+  "expr": "c * b + (a + b) % b - a % b == 0",
+  "has_by_block": false,
+  "decl_lines": [
+   15,
+   23
+  ],
+  "seeds": {
+   "c * b + (a + b) % b - a % b": "fail",
+   "(a + b)": "fail",
+   "a + b": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "c * b + (a + b) % b - a % b == 0": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-177",
+  "expr": "c * b + (a - b) % b - a % b == 0",
+  "has_by_block": false,
+  "decl_lines": [
+   24,
+   32
+  ],
+  "seeds": {
+   "c * b + (a - b) % b - a % b": "fail",
+   "(a - b)": "fail",
+   "a - b": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "c * b + (a - b) % b - a % b == 0": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-178",
+  "expr": "result[..] == m_dataEntries[..]",
+  "has_by_block": false,
+  "decl_lines": [
+   50,
+   77
+  ],
+  "seeds": {
+   "result[..]": "fail",
+   "m_dataEntries[..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "result[..] == m_dataEntries[..]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-180",
+  "expr": "a+b == b",
+  "has_by_block": false,
+  "decl_lines": [
+   134,
+   145
+  ],
+  "seeds": {
+   "a+b": "fail"
+  },
+  "eq_seeds": {
+   "a+b == b": "pass"
+  },
+  "prelude_axioms": [
+   "append-empty",
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-181",
+  "expr": "a + b == [a[0]] + (a[1..] + b)",
+  "has_by_block": false,
+  "decl_lines": [
+   134,
+   145
+  ],
+  "seeds": {
+   "a + b": "fail",
+   "[a[0]] + (a[1..] + b)": "fail",
+   "a[0]": "fail",
+   "(a[1..] + b)": "fail",
+   "a[1..]": "fail",
+   "a[1..] + b": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a + b == [a[0]] + (a[1..] + b)": "pass"
+  },
+  "prelude_axioms": [
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-182",
+  "expr": "zs[1..] == xs[1..] + ys",
+  "has_by_block": false,
+  "decl_lines": [
+   6,
+   26
+  ],
+  "seeds": {
+   "zs[1..]": "fail",
+   "xs[1..] + ys": "fail",
+   "xs[1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "zs[1..] == xs[1..] + ys": "pass"
+  },
+  "prelude_axioms": [
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-183",
+  "expr": "a[..] == old@L(a[..])",
+  "has_by_block": false,
+  "decl_lines": [
+   98,
+   136
+  ],
+  "seeds": {},
+  "eq_seeds": {
+   "a[..] == old@L(a[..])": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-184",
+  "expr": "t4 == tests2",
+  "has_by_block": false,
+  "decl_lines": [
+   18,
+   32
+  ],
+  "seeds": {},
+  "eq_seeds": {
+   "t4 == tests2": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-186",
+  "expr": "a[..i+1][..i] == a[..i]",
+  "has_by_block": false,
+  "decl_lines": [
+   1,
+   24
+  ],
+  "seeds": {
+   "a[..i+1][..i]": "fail",
+   "a[..i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..i+1][..i] == a[..i]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-187",
+  "expr": "a[..a.Length] == a[..]",
+  "has_by_block": false,
+  "decl_lines": [
+   1,
+   24
+  ],
+  "seeds": {
+   "a[..a.Length]": "fail",
+   "a[..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..a.Length] == a[..]": "pass"
+  },
+  "prelude_axioms": [
+   "take-take",
+   "take-full",
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-188",
+  "expr": "a[..] == [9.0, 4.0, 6.0, 3.0, 8.0]",
+  "has_by_block": false,
+  "decl_lines": [
+   55,
+   61
+  ],
+  "seeds": {
+   "a[..]": "fail",
+   "[9.0, 4.0, 6.0, 3.0, 8.0]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..] == [9.0, 4.0, 6.0, 3.0, 8.0]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-189",
+  "expr": "a[3] == 4.0",
+  "has_by_block": false,
+  "decl_lines": [
+   62,
+   68
+  ],
+  "seeds": {
+   "a[3]": "pass"
+  },
+  "eq_seeds": {
+   "a[3] == 4.0": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-190",
+  "expr": "isPrefixPred(str1[0..0],str2[0..])",
+  "has_by_block": false,
+  "decl_lines": [
+   112,
+   135
+  ],
+  "seeds": {
+   "isPrefixPred(str1[0..0],str2[0..])": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 131,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-191",
+  "expr": "d[0]=='x' && d[1]=='y'",
+  "has_by_block": false,
+  "decl_lines": [
+   38,
+   62
+  ],
+  "seeds": {
+   "d[0]": "fail",
+   "d[1]": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {
+   "d[0]=='x'": "fail",
+   "d[1]=='y'": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-192",
+  "expr": "e[0]=='1' && e[1]=='2' && e[2]=='3' && e[3]=='4' && e[4]=='2' && e[5]=='1'",
+  "has_by_block": false,
+  "decl_lines": [
+   38,
+   62
+  ],
+  "seeds": {
+   "e[0]": "fail",
+   "e[1]": "fail",
+   "e[2]": "fail",
+   "e[3]": "fail",
+   "e[4]": "fail",
+   "e[5]": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {
+   "e[0]=='1'": "fail",
+   "e[1]=='2'": "fail",
+   "e[2]=='3'": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-193",
+  "expr": "i[0]==A && i[1]==T && i[2]==C && i[3]==T && i[4]==T",
+  "has_by_block": false,
+  "decl_lines": [
+   89,
+   120
+  ],
+  "seeds": {
+   "i[0]": "fail",
+   "i[1]": "fail",
+   "i[2]": "fail",
+   "i[3]": "fail",
+   "i[4]": "fail",
+   "<all>": "pass"
+  },
+  "eq_seeds": {
+   "i[0]==A": "fail",
+   "i[1]==T": "fail",
+   "i[2]==C": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-362",
+  "expr": "(system.stateValid(pid, state))",
+  "has_by_block": false,
+  "decl_lines": [
+   309,
+   455
+  ],
+  "seeds": {
+   "system.stateValid(pid, state)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-196",
+  "expr": "x in C",
+  "has_by_block": true,
+  "decl_lines": [
+   16,
+   39
+  ],
+  "seeds": {
+   "x in C": "fail"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-197",
+  "expr": "m'.Keys == m.Keys - {k}",
+  "has_by_block": false,
+  "decl_lines": [
+   11,
+   23
+  ],
+  "seeds": {
+   "m.Keys - {k}": "fail"
+  },
+  "eq_seeds": {
+   "m'.Keys == m.Keys - {k}": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-363",
+  "expr": "m[k] == v",
+  "has_by_block": false,
+  "decl_lines": [
+   74,
+   102
+  ],
+  "seeds": {
+   "m[k]": "pass"
+  },
+  "eq_seeds": {
+   "m[k] == v": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-199",
+  "expr": "m.Keys == old(m).Keys + {k}",
+  "has_by_block": false,
+  "decl_lines": [
+   74,
+   102
+  ],
+  "seeds": {},
+  "eq_seeds": {
+   "m.Keys == old(m).Keys + {k}": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-200",
+  "expr": "m.Keys == old(m).Keys + {k}",
+  "has_by_block": false,
+  "decl_lines": [
+   74,
+   102
+  ],
+  "seeds": {},
+  "eq_seeds": {
+   "m.Keys == old(m).Keys + {k}": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-201",
+  "expr": "items == m.Items",
+  "has_by_block": true,
+  "decl_lines": [
+   124,
+   142
+  ],
+  "seeds": {
+   "(k, m[k]) in m.Items": "invalid",
+   "k, m[k]": "invalid",
+   "m[k]": "invalid",
+   "(x.0, m[x.0]) in items": "invalid",
+   "x.0, m[x.0]": "invalid",
+   "m[x.0]": "invalid"
+  },
+  "eq_seeds": {
+   "items == m.Items": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-313",
+  "expr": "(x.0, m[x.0]) in items",
+  "has_by_block": false,
+  "decl_lines": [
+   124,
+   142
+  ],
+  "seeds": {
+   "(x.0, m[x.0]) in items": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-202",
+  "expr": "exists k' | k' in m.Keys :: old(m)[k'] == v'",
+  "has_by_block": false,
+  "decl_lines": [
+   152,
+   168
+  ],
+  "seeds": {},
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-203",
+  "expr": "(s + [b])[1..] == s[1..] + [b]",
+  "has_by_block": false,
+  "decl_lines": [
+   47,
+   61
+  ],
+  "seeds": {
+   "(s + [b])[1..]": "fail",
+   "s + [b]": "fail",
+   "s[1..] + [b]": "fail",
+   "s[1..]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "(s + [b])[1..] == s[1..] + [b]": "pass"
+  },
+  "prelude_axioms": [
+   "append-assoc",
+   "drop-append"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-204",
+  "expr": "a == exp(b, from_bits(bits(n0)[..i]) + exp(2, i))",
+  "has_by_block": true,
+  "decl_lines": [
+   62,
+   129
+  ],
+  "seeds": {
+   "exp(b, from_bits(bits(n0)[..i]) + exp(2, i))": "fail",
+   "from_bits(bits(n0)[..i])": "fail",
+   "bits(n0)[..i]": "fail",
+   "exp(2, i)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a == exp(b, from_bits(bits(n0)[..i]) + exp(2, i))": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-205",
+  "expr": "bits(n0)[..i+1] == bits(n0)[..i] + [bits(n0)[i]]",
+  "has_by_block": false,
+  "decl_lines": [
+   62,
+   129
+  ],
+  "seeds": {
+   "bits(n0)[..i+1]": "fail",
+   "bits(n0)[..i] + [bits(n0)[i]]": "fail",
+   "bits(n0)[..i]": "fail",
+   "bits(n0)[i]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "bits(n0)[..i+1] == bits(n0)[..i] + [bits(n0)[i]]": "pass"
+  },
+  "prelude_axioms": [
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-206",
+  "expr": "c == exp(b, exp(2, i+1))",
+  "has_by_block": true,
+  "decl_lines": [
+   62,
+   129
+  ],
+  "seeds": {
+   "exp(b, exp(2, i+1))": "fail",
+   "exp(2, i+1)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "c == exp(b, exp(2, i+1))": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-207",
+  "expr": "bits(n0)[..i] == bits(n0)",
+  "has_by_block": false,
+  "decl_lines": [
+   62,
+   129
+  ],
+  "seeds": {
+   "bits(n0)[..i]": "fail",
+   "bits(n0)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "bits(n0)[..i] == bits(n0)": "pass"
+  },
+  "prelude_axioms": [
+   "take-full"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-208",
+  "expr": "NextStep(b[0], b[1], TurnStep(take := 4, p := 1))",
+  "has_by_block": false,
+  "decl_lines": [
+   62,
+   81
+  ],
+  "seeds": {
+   "NextStep(b[0], b[1], TurnStep(take := 4, p := 1))": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 66,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-209",
+  "expr": "NextStep(b[1], b[2], TurnStep(take := 7, p := 2))",
+  "has_by_block": false,
+  "decl_lines": [
+   62,
+   81
+  ],
+  "seeds": {
+   "NextStep(b[1], b[2], TurnStep(take := 7, p := 2))": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 66,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-210",
+  "expr": "OnChordHeardDominatesId(v)",
+  "has_by_block": true,
+  "decl_lines": [
+   193,
+   206
+  ],
+  "seeds": {
+   "OnChordHeardDominatesId(v)": "fail"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-211",
+  "expr": "OnChordHeardDominatesId(v')",
+  "has_by_block": true,
+  "decl_lines": [
+   207,
+   252
+  ],
+  "seeds": {
+   "OnChordHeardDominatesId(v')": "fail"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-212",
+  "expr": "Spec.Init(ss'(0))",
+  "has_by_block": true,
+  "decl_lines": [
+   96,
+   120
+  ],
+  "seeds": {
+   "Spec.Init(ss'(0))": "fail",
+   "ss'(0)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-213",
+  "expr": "f(f(x)) == ff(x)",
+  "has_by_block": false,
+  "decl_lines": [
+   21,
+   28
+  ],
+  "seeds": {
+   "f(f(x))": "pass"
+  },
+  "eq_seeds": {
+   "f(f(x)) == ff(x)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-214",
+  "expr": "fila.a[0] == 2",
+  "has_by_block": false,
+  "decl_lines": [
+   153,
+   198
+  ],
+  "seeds": {
+   "fila.a[0]": "pass"
+  },
+  "eq_seeds": {
+   "fila.a[0] == 2": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-215",
+  "expr": "serialise(t) + [] == serialise(t)",
+  "has_by_block": false,
+  "decl_lines": [
+   91,
+   111
+  ],
+  "seeds": {
+   "serialise(t) + []": "fail",
+   "serialise(t)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "serialise(t) + [] == serialise(t)": "pass"
+  },
+  "prelude_axioms": [
+   "append-empty"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-216",
+  "expr": "serialise(t1) + [ CSNd(x) ] + cds ==  serialise(t1) + ([ CSNd(x) ] + cds)",
+  "has_by_block": false,
+  "decl_lines": [
+   112,
+   171
+  ],
+  "seeds": {
+   "serialise(t1) + [ CSNd(x) ] + cds": "fail",
+   "serialise(t1)": "fail",
+   "CSNd(x)": "fail",
+   "serialise(t1) + ([ CSNd(x) ] + cds)": "fail",
+   "([ CSNd(x) ] + cds)": "fail",
+   "[ CSNd(x) ] + cds": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "serialise(t1) + [ CSNd(x) ] + cds ==  serialise(t1) + ([ CSNd(x) ] + cds)": "pass"
+  },
+  "prelude_axioms": [
+   "append-assoc"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-217",
+  "expr": "serialise(t2) + serialise(t1) + [ CDNd(x) ] + cds == serialise(t2) + (serialise(t1) + [ CDNd(x) ] + cds)",
+  "has_by_block": false,
+  "decl_lines": [
+   112,
+   171
+  ],
+  "seeds": {
+   "serialise(t2) + serialise(t1) + [ CDNd(x) ] + cds": "fail",
+   "serialise(t2)": "fail",
+   "serialise(t1)": "fail",
+   "CDNd(x)": "fail",
+   "serialise(t2) + (serialise(t1) + [ CDNd(x) ] + cds)": "fail",
+   "(serialise(t1) + [ CDNd(x) ] + cds)": "fail",
+   "serialise(t1) + [ CDNd(x) ] + cds": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "serialise(t2) + serialise(t1) + [ CDNd(x) ] + cds == serialise(t2) + (serialise(t1) + [ CDNd(x) ] + cds)": "pass"
+  },
+  "prelude_axioms": [
+   "append-assoc"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-218",
+  "expr": "serialise(t1) + [CDNd(x)] + cds == serialise(t1) + ([CDNd(x)] + cds)",
+  "has_by_block": false,
+  "decl_lines": [
+   112,
+   171
+  ],
+  "seeds": {
+   "serialise(t1) + [CDNd(x)] + cds": "fail",
+   "serialise(t1)": "fail",
+   "CDNd(x)": "fail",
+   "serialise(t1) + ([CDNd(x)] + cds)": "fail",
+   "([CDNd(x)] + cds)": "fail",
+   "[CDNd(x)] + cds": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "serialise(t1) + [CDNd(x)] + cds == serialise(t1) + ([CDNd(x)] + cds)": "pass"
+  },
+  "prelude_axioms": [
+   "append-assoc"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-219",
+  "expr": "(ts + [ t2 ]) +  [ t1 ] == ts + [t2,t1]",
+  "has_by_block": false,
+  "decl_lines": [
+   112,
+   171
+  ],
+  "seeds": {
+   "(ts + [ t2 ]) +  [ t1 ]": "fail",
+   "(ts + [ t2 ])": "fail",
+   "ts + [ t2 ]": "fail",
+   "ts + [t2,t1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "(ts + [ t2 ]) +  [ t1 ] == ts + [t2,t1]": "pass"
+  },
+  "prelude_axioms": [
+   "take-append",
+   "append-assoc"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-220",
+  "expr": "OneSpec.NextStep(Abstraction(v), Abstraction(v'), OneSpec.DecrementStep())",
+  "has_by_block": false,
+  "decl_lines": [
+   86,
+   101
+  ],
+  "seeds": {
+   "OneSpec.NextStep(Abstraction(v), Abstraction(v'), OneSpec.DecrementStep())": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 92,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-221",
+  "expr": "OneSpec.NextStep(Abstraction(v), Abstraction(v'), OneSpec.IncrementStep())",
+  "has_by_block": false,
+  "decl_lines": [
+   86,
+   101
+  ],
+  "seeds": {
+   "OneSpec.NextStep(Abstraction(v), Abstraction(v'), OneSpec.IncrementStep())": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 95,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-222",
+  "expr": "m3 < m1 - m2",
+  "has_by_block": false,
+  "decl_lines": [
+   102,
+   110
+  ],
+  "seeds": {
+   "m1 - m2": "fail"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-223",
+  "expr": "multiset(s1[..|s1|-1]) == multiset(s2[..|s2|-1])",
+  "has_by_block": true,
+  "decl_lines": [
+   27,
+   57
+  ],
+  "seeds": {
+   "multiset(s1[..|s1|-1])": "fail",
+   "s1[..|s1|-1]": "fail",
+   "multiset(s2[..|s2|-1])": "fail",
+   "s2[..|s2|-1]": "fail",
+   "s1[..|s1|-1] + [s1[|s1|-1]]": "fail",
+   "s1[|s1|-1]": "fail",
+   "multiset(s1)": "fail",
+   "multiset(s1[..|s1|-1]) + multiset([s1[|s1|-1]])": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "multiset(s1[..|s1|-1]) == multiset(s2[..|s2|-1])": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-315",
+  "expr": "s1 == s1[..|s1|-1] + [s1[|s1|-1]]",
+  "has_by_block": false,
+  "decl_lines": [
+   27,
+   57
+  ],
+  "seeds": {
+   "s1[..|s1|-1] + [s1[|s1|-1]]": "fail",
+   "s1[..|s1|-1]": "fail",
+   "s1[|s1|-1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s1 == s1[..|s1|-1] + [s1[|s1|-1]]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-316",
+  "expr": "s2 == s2[..|s1|-1] + [s2[|s1|-1]]",
+  "has_by_block": false,
+  "decl_lines": [
+   27,
+   57
+  ],
+  "seeds": {
+   "s2[..|s1|-1] + [s2[|s1|-1]]": "fail",
+   "s2[..|s1|-1]": "fail",
+   "s2[|s1|-1]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s2 == s2[..|s1|-1] + [s2[|s1|-1]]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-224",
+  "expr": "s2[|s2|-1] !in multiset(s1)",
+  "has_by_block": false,
+  "decl_lines": [
+   27,
+   57
+  ],
+  "seeds": {
+   "s2[|s2|-1] !in multiset(s1)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-225",
+  "expr": "s1[|s1|-1] !in multiset(s2)",
+  "has_by_block": false,
+  "decl_lines": [
+   27,
+   57
+  ],
+  "seeds": {
+   "s1[|s1|-1] !in multiset(s2)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-226",
+  "expr": "|multiset(curSeq)| != |multiset(curSeq')|",
+  "has_by_block": false,
+  "decl_lines": [
+   58,
+   70
+  ],
+  "seeds": {
+   "|multiset(curSeq)|": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-229",
+  "expr": "2 in PQ.Elements(pq2)",
+  "has_by_block": false,
+  "decl_lines": [
+   294,
+   321
+  ],
+  "seeds": {
+   "2 in PQ.Elements(pq2)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-231",
+  "expr": "|maxSet| == 3",
+  "has_by_block": false,
+  "decl_lines": [
+   29,
+   55
+  ],
+  "seeds": {
+   "|maxSet|": "pass"
+  },
+  "eq_seeds": {
+   "|maxSet| == 3": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 32,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-232",
+  "expr": "divides(2, 6)",
+  "has_by_block": false,
+  "decl_lines": [
+   13,
+   26
+  ],
+  "seeds": {
+   "divides(2, 6)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-233",
+  "expr": "divides(3, 9)",
+  "has_by_block": false,
+  "decl_lines": [
+   13,
+   26
+  ],
+  "seeds": {
+   "divides(3, 9)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-234",
+  "expr": "divides(f, i)",
+  "has_by_block": false,
+  "decl_lines": [
+   15,
+   40
+  ],
+  "seeds": {
+   "divides(f, i)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-236",
+  "expr": "left + right == input",
+  "has_by_block": false,
+  "decl_lines": [
+   18,
+   44
+  ],
+  "seeds": {
+   "left + right": "fail"
+  },
+  "eq_seeds": {
+   "left + right == input": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-237",
+  "expr": "a[..ai] == a[..ao] + a[ao..ai]",
+  "has_by_block": false,
+  "decl_lines": [
+   45,
+   96
+  ],
+  "seeds": {
+   "a[..ai]": "fail",
+   "a[..ao] + a[ao..ai]": "fail",
+   "a[..ao]": "fail",
+   "a[ao..ai]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a[..ai] == a[..ao] + a[ao..ai]": "pass"
+  },
+  "prelude_axioms": [
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-238",
+  "expr": "b[..bi] == b[..bo] + b[bo..bi]",
+  "has_by_block": false,
+  "decl_lines": [
+   45,
+   96
+  ],
+  "seeds": {
+   "b[..bi]": "fail",
+   "b[..bo] + b[bo..bi]": "fail",
+   "b[..bo]": "fail",
+   "b[bo..bi]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "b[..bi] == b[..bo] + b[bo..bi]": "pass"
+  },
+  "prelude_axioms": [
+   "take-build"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-239",
+  "expr": "a == a[..ai]",
+  "has_by_block": false,
+  "decl_lines": [
+   45,
+   96
+  ],
+  "seeds": {
+   "a[..ai]": "fail"
+  },
+  "eq_seeds": {
+   "a == a[..ai]": "pass"
+  },
+  "prelude_axioms": [
+   "take-full"
+  ],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-240",
+  "expr": "b == b[..bi]",
+  "has_by_block": false,
+  "decl_lines": [
+   45,
+   96
+  ],
+  "seeds": {
+   "b[..bi]": "fail"
+  },
+  "eq_seeds": {
+   "b == b[..bi]": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-241",
+  "expr": "a[..] == to_seq(a, 0)",
+  "has_by_block": false,
+  "decl_lines": [
+   12,
+   21
+  ],
+  "seeds": {
+   "a[..]": "fail",
+   "to_seq(a, 0)": "pass"
+  },
+  "eq_seeds": {
+   "a[..] == to_seq(a, 0)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST",
+   "AX"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-242",
+  "expr": "|line| == |setB|",
+  "has_by_block": true,
+  "decl_lines": [
+   19,
+   57
+  ],
+  "seeds": {
+   "|line|": "fail",
+   "|setB|": "fail",
+   "p in line": "invalid",
+   "(p, b) in relation": "invalid",
+   "p, b": "invalid",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "|line| == |setB|": "fail"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "DB-325",
+  "expr": "p in line && (p, b) in relation",
+  "has_by_block": false,
+  "decl_lines": [
+   19,
+   57
+  ],
+  "seeds": {
+   "p in line": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": 35,
+  "label": "INST-witness"
+ },
+ {
+  "key": "DB-243",
+  "expr": "cp == cp' + line",
+  "has_by_block": false,
+  "decl_lines": [
+   19,
+   57
+  ],
+  "seeds": {
+   "cp' + line": "fail"
+  },
+  "eq_seeds": {
+   "cp == cp' + line": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-244",
+  "expr": "|b| == |a| + |b-a|",
+  "has_by_block": false,
+  "decl_lines": [
+   3,
+   9
+  ],
+  "seeds": {
+   "|b|": "fail",
+   "|a| + |b-a|": "pass"
+  },
+  "eq_seeds": {
+   "|b| == |a| + |b-a|": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-245",
+  "expr": "b == a + (b - a)",
+  "has_by_block": false,
+  "decl_lines": [
+   10,
+   16
+  ],
+  "seeds": {
+   "a + (b - a)": "pass"
+  },
+  "eq_seeds": {
+   "b == a + (b - a)": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST",
+   "AX"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-248",
+  "expr": "SetRange(n)\n          == SetRange(n-1) + {n-1}",
+  "has_by_block": false,
+  "decl_lines": [
+   37,
+   50
+  ],
+  "seeds": {
+   "SetRange(n)": "fail",
+   "SetRange(n-1) + {n-1}": "fail",
+   "SetRange(n-1)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "SetRange(n)\n          == SetRange(n-1) + {n-1}": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": true,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-249",
+  "expr": "m'.Keys == m.Keys - {key}",
+  "has_by_block": false,
+  "decl_lines": [
+   54,
+   68
+  ],
+  "seeds": {
+   "m.Keys - {key}": "fail"
+  },
+  "eq_seeds": {
+   "m'.Keys == m.Keys - {key}": "pass"
+  },
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "DB-251",
+  "expr": "IsChord(c, v, start, srcidx)",
+  "has_by_block": false,
+  "decl_lines": [
+   143,
+   185
+  ],
+  "seeds": {
+   "IsChord(c, v, start, srcidx)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ },
+ {
+  "key": "DB-252",
+  "expr": "IsChord(c, v, start, end)",
+  "has_by_block": false,
+  "decl_lines": [
+   143,
+   185
+  ],
+  "seeds": {
+   "IsChord(c, v, start, end)": "pass"
+  },
+  "eq_seeds": {},
+  "prelude_axioms": [],
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "unknown_eq": false,
+   "from_ast": true
+  },
+  "categories": [
+   "INST"
+  ],
+  "witness_error_line": null,
+  "label": "INST-forall"
+ }
+]

@@ -1,0 +1,7914 @@
+[
+ {
+  "key": "V-0",
+  "kind": "plain",
+  "expr": "t.subrange(0, t.len() - 1) =~= s",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "t.subrange(0, t.len() - 1)": "fail",
+   "t.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "t.subrange(0, t.len() - 1) =~= s": "fail"
+  },
+  "axioms": [
+   "push-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-1",
+  "kind": "plain",
+  "expr": "tail =~= Seq::<int>::empty()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "Seq::<int>::empty()": "fail"
+  },
+  "eq_seeds": {
+   "tail =~= Seq::<int>::empty()": "pass"
+  },
+  "axioms": [
+   "subrange-empty"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-2",
+  "kind": "plain",
+  "expr": "s.subrange(0, 0int) =~= Seq::<int>::empty()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s.subrange(0, 0int)": "fail",
+   "Seq::<int>::empty()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s.subrange(0, 0int) =~= Seq::<int>::empty()": "pass"
+  },
+  "axioms": [
+   "subrange-empty"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-3",
+  "kind": "plain",
+  "expr": "prefix.subrange(1, prefix.len() as int) =~= s.subrange(1, s.len() - 1)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "prefix.subrange(1, prefix.len() as int)": "fail",
+   "prefix.len()": "fail",
+   "s.subrange(1, s.len() - 1)": "fail",
+   "s.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "prefix.subrange(1, prefix.len() as int) =~= s.subrange(1, s.len() - 1)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-4",
+  "kind": "plain",
+  "expr": "tail.subrange(0, tail.len() - 1) =~= s.subrange(1, s.len() - 1)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "tail.subrange(0, tail.len() - 1)": "fail",
+   "tail.len()": "fail",
+   "s.subrange(1, s.len() - 1)": "fail",
+   "s.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "tail.subrange(0, tail.len() - 1) =~= s.subrange(1, s.len() - 1)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-5",
+  "kind": "plain",
+  "expr": "gk.subrange(1, gk.len() as int) =~= tail",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "gk.subrange(1, gk.len() as int)": "fail",
+   "gk.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "gk.subrange(1, gk.len() as int) =~= tail": "pass"
+  },
+  "axioms": [
+   "add-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-6",
+  "kind": "plain",
+  "expr": "gk.subrange(1, gk.len() as int) =~= tail",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "gk.subrange(1, gk.len() as int)": "fail",
+   "gk.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "gk.subrange(1, gk.len() as int) =~= tail": "pass"
+  },
+  "axioms": [
+   "add-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-7",
+  "kind": "plain",
+  "expr": "sub1 =~= sub.push(xs[i as int])",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "sub.push(xs[i as int])": "fail",
+   "xs[i as int]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "sub1 =~= sub.push(xs[i as int])": "fail"
+  },
+  "axioms": [
+   "subrange-subrange",
+   "subrange-push"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-8",
+  "kind": "plain",
+  "expr": "xs.subrange(0, xs.len() as int) =~= xs",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "xs.subrange(0, xs.len() as int)": "fail",
+   "xs.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "xs.subrange(0, xs.len() as int) =~= xs": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-9",
+  "kind": "plain",
+  "expr": "sub1 =~= sub.push(ys[i as int])",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "sub.push(ys[i as int])": "fail",
+   "ys[i as int]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "sub1 =~= sub.push(ys[i as int])": "fail"
+  },
+  "axioms": [
+   "subrange-subrange",
+   "subrange-push"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-10",
+  "kind": "plain",
+  "expr": "ys.subrange(0, ys.len() as int) =~= ys",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "ys.subrange(0, ys.len() as int)": "fail",
+   "ys.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "ys.subrange(0, ys.len() as int) =~= ys": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-11",
+  "kind": "plain",
+  "expr": "grid[i][cc] == 'B'",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "grid[i][cc]": "pass"
+  },
+  "eq_seeds": {
+   "grid[i][cc] =~= 'B'": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-447",
+  "kind": "plain",
+  "expr": "is_black_square_centered_at(n as int, m as int, sg, gcr, gcc, gh)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "is_black_square_centered_at(n as int, m as int, sg, gcr, gcc, gh)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-13",
+  "kind": "plain",
+  "expr": "c_spec.subrange(0, c_spec.len() as int) =~= c_spec",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "c_spec.subrange(0, c_spec.len() as int)": "fail",
+   "c_spec.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "c_spec.subrange(0, c_spec.len() as int) =~= c_spec": "fail"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-14",
+  "kind": "plain",
+  "expr": "a_spec.subrange(0, a_spec.len() as int) =~= a_spec",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a_spec.subrange(0, a_spec.len() as int)": "fail",
+   "a_spec.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a_spec.subrange(0, a_spec.len() as int) =~= a_spec": "pass"
+  },
+  "axioms": [
+   "subrange-full"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-15",
+  "kind": "plain",
+  "expr": "c_sub.drop_first() =~= c_sub_next",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "c_sub.drop_first()": "fail"
+  },
+  "eq_seeds": {
+   "c_sub.drop_first() =~= c_sub_next": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-16",
+  "kind": "plain",
+  "expr": "a_sub.drop_first() =~= a_sub_next",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a_sub.drop_first()": "fail"
+  },
+  "eq_seeds": {
+   "a_sub.drop_first() =~= a_sub_next": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-17",
+  "kind": "plain",
+  "expr": "c_sub.drop_first() =~= c_sub_next",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "c_sub.drop_first()": "fail"
+  },
+  "eq_seeds": {
+   "c_sub.drop_first() =~= c_sub_next": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-18",
+  "kind": "plain",
+  "expr": "s1i1 =~= combined",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {},
+  "eq_seeds": {
+   "s1i1 =~= combined": "pass"
+  },
+  "axioms": [
+   "subrange-subrange",
+   "subrange-push"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-19",
+  "kind": "plain",
+  "expr": "combined.take(combined.len() as int - 1) =~= s1i",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "combined.take(combined.len() as int - 1)": "fail",
+   "combined.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "combined.take(combined.len() as int - 1) =~= s1i": "pass"
+  },
+  "axioms": [
+   "push-subrange",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-23",
+  "kind": "plain",
+  "expr": "s.push(y)[w] == x",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s.push(y)[w]": "fail"
+  },
+  "eq_seeds": {
+   "s.push(y)[w] =~= x": "fail"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-303",
+  "kind": "forall",
+  "expr": "forall|i: int| #![trigger result@[i]] 0 <= i < result@.len() implies\n            in_all_stops_up_to(result@[i] as int, stops_spec, 1int)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "timeout",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-304",
+  "kind": "forall",
+  "expr": "forall|m: int| 0 <= m < 1int implies in_seq(result@[i] as int, #[trigger] stops_spec[m])",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "timeout",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-448",
+  "kind": "plain",
+  "expr": "stops_spec[0] == stops@[0int]@.map_values(|x: i64| x as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "stops_spec[0]": "timeout",
+   "stops@[0int]@.map_values(|x: i64| x as int)": "pass"
+  },
+  "eq_seeds": {
+   "stops_spec[0] =~= stops@[0int]@.map_values(|x: i64| x as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST",
+   "AX"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-305",
+  "kind": "plain",
+  "expr": "stops_spec[0][i] == result@[i] as int",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "stops_spec[0][i]": "pass"
+  },
+  "eq_seeds": {
+   "stops_spec[0][i] =~= result@[i] as int": "timeout"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-307",
+  "kind": "plain",
+  "expr": "in_seq(result@[i as int] as int, stops_spec[k as int])",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "in_seq(result@[i as int] as int, stops_spec[k as int])": "timeout",
+   "result@[i as int]": "timeout",
+   "stops_spec[k as int]": "timeout",
+   "stops_spec[k as int][jp]": "invalid",
+   "stops[k as int]@[jp] as int": "invalid",
+   "stops[k as int]@[jp]": "invalid",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-308",
+  "kind": "plain",
+  "expr": "stops_spec[k as int][jp] == stops[k as int]@[jp] as int",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "stops_spec[k as int][jp]": "pass"
+  },
+  "eq_seeds": {
+   "stops_spec[k as int][jp] =~= stops[k as int]@[jp] as int": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-309",
+  "kind": "forall",
+  "expr": "forall|idx: int| 0 <= idx < (i + 1) as int implies\n                        (in_seq(#[trigger] result@[idx] as int, stops_spec[k as int]) ==> in_seq(result@[idx] as int, new_result@.map_values(|v: i64| v as int)))",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-310",
+  "kind": "plain",
+  "expr": "new_result@.map_values(|v: i64| v as int)[w] == result@[idx] as int",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "new_result@.map_values(|v: i64| v as int)[w]": "pass"
+  },
+  "eq_seeds": {
+   "new_result@.map_values(|v: i64| v as int)[w] =~= result@[idx] as int": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-311",
+  "kind": "plain",
+  "expr": "new_result@.map_values(|v: i64| v as int)[old_nr.len() as int] == result@[i as int] as int",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "new_result@.map_values(|v: i64| v as int)[old_nr.len() as int]": "pass"
+  },
+  "eq_seeds": {
+   "new_result@.map_values(|v: i64| v as int)[old_nr.len() as int] =~= result@[i as int] as int": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-312",
+  "kind": "forall",
+  "expr": "forall|x: int| #[trigger] in_all_stops_up_to(x, stops_spec, (k + 1) as int) implies\n                in_seq(x, new_result@.map_values(|v: i64| v as int))",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "timeout",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-313",
+  "kind": "plain",
+  "expr": "in_all_stops_up_to(x, stops_spec, k as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "in_all_stops_up_to(x, stops_spec, k as int)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-449",
+  "kind": "forall",
+  "expr": "forall|i: int| 0 <= i < result@.len() implies\n            possible_line(result@[i] as int, stops_spec)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "timeout",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-450",
+  "kind": "plain",
+  "expr": "in_all_stops_up_to(result@[i] as int, stops_spec, stops_spec.len() as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "in_all_stops_up_to(result@[i] as int, stops_spec, stops_spec.len() as int)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-451",
+  "kind": "forall",
+  "expr": "forall|kk: int, j: int| 0 <= kk < stops@.len() && 0 <= j < stops@[kk]@.len() implies\n            (possible_line(stops@[kk]@[j] as int, stops_spec) ==> in_seq(stops@[kk]@[j] as int, result@.map_values(|x: i64| x as int)))",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "timeout",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-314",
+  "kind": "plain",
+  "expr": "in_all_stops_up_to(stops@[kk]@[j] as int, stops_spec, stops_spec.len() as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "in_all_stops_up_to(stops@[kk]@[j] as int, stops_spec, stops_spec.len() as int)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-315",
+  "kind": "forall",
+  "expr": "forall|i: int| 0 <= i < a.len() implies seq_min(a) <= #[trigger] a[i]",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "seq_min": "fail"
+  },
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-316",
+  "kind": "plain",
+  "expr": "prefix[i] == a[i]",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "prefix[i]": "pass"
+  },
+  "eq_seeds": {
+   "prefix[i] =~= a[i]": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-317",
+  "kind": "forall",
+  "expr": "forall|i: int| 0 <= i < a.len() implies seq_max(a) >= #[trigger] a[i]",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "seq_max": "fail"
+  },
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-318",
+  "kind": "plain",
+  "expr": "prefix[i] == a[i]",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "prefix[i]": "pass"
+  },
+  "eq_seeds": {
+   "prefix[i] =~= a[i]": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-26",
+  "kind": "plain",
+  "expr": "valid_store_config(a, lo, a.len() as int + k)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "valid_store_config(a, lo, a.len() as int + k)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-27",
+  "kind": "plain",
+  "expr": "a_spec.take(i as int + 1).take(i as int) =~= a_spec.take(i as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a_spec.take(i as int + 1).take(i as int)": "fail",
+   "a_spec.take(i as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a_spec.take(i as int + 1).take(i as int) =~= a_spec.take(i as int)": "fail"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-28",
+  "kind": "plain",
+  "expr": "a_spec.take(a_spec.len() as int) =~= a_spec",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a_spec.take(a_spec.len() as int)": "fail",
+   "a_spec.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a_spec.take(a_spec.len() as int) =~= a_spec": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-29",
+  "kind": "plain",
+  "expr": "a.take(i + 1).take(i as int) =~= a.take(i)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a.take(i + 1).take(i as int)": "fail",
+   "a.take(i)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a.take(i + 1).take(i as int) =~= a.take(i)": "fail"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-32",
+  "kind": "plain",
+  "expr": "a_int.take(a@.len() as int) =~= a_int",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a_int.take(a@.len() as int)": "fail",
+   "a@.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a_int.take(a@.len() as int) =~= a_int": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-319",
+  "kind": "forall",
+  "expr": "forall|k2: int| 0 <= k2 < k implies !(valid_k(a_int, k2) && awruk_wins(a_int, k2))",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-34",
+  "kind": "plain",
+  "expr": "opinions@.map_values(|x: i64| x as int).take(opinions.len() as int)\n            =~= opinions@.map_values(|x: i64| x as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "opinions@.map_values(|x: i64| x as int).take(opinions.len() as int)": "fail",
+   "opinions.len()": "fail",
+   "opinions@.map_values(|x: i64| x as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "opinions@.map_values(|x: i64| x as int).take(opinions.len() as int) =~= opinions@.map_values(|x: i64| x as int)": "pass"
+  },
+  "axioms": [
+   "subrange-full"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-320",
+  "kind": "plain",
+  "expr": "s2.take(s2.len() as int - 1) =~= s",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s2.take(s2.len() as int - 1)": "fail",
+   "s2.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s2.take(s2.len() as int - 1) =~= s": "pass"
+  },
+  "axioms": [
+   "push-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-35",
+  "kind": "plain",
+  "expr": "digits_spec.take(i as int + 1) =~= prefix.push(elem)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "digits_spec.take(i as int + 1)": "fail",
+   "prefix.push(elem)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "digits_spec.take(i as int + 1) =~= prefix.push(elem)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange",
+   "subrange-push"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-36",
+  "kind": "plain",
+  "expr": "digits_spec.take(digits_spec.len() as int) =~= digits_spec",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "digits_spec.take(digits_spec.len() as int)": "fail",
+   "digits_spec.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "digits_spec.take(digits_spec.len() as int) =~= digits_spec": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-42",
+  "kind": "plain",
+  "expr": "sufficient_notebooks(r as int, g as int, b as int, n as int, k as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "sufficient_notebooks(r as int, g as int, b as int, n as int, k as int)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-52",
+  "kind": "plain",
+  "expr": "valid_choice(y as int, b as int, r as int, m as int, m as int + 1, m as int + 2)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "valid_choice(y as int, b as int, r as int, m as int, m as int + 1, m as int + 2)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-56",
+  "kind": "plain",
+  "expr": "sum_seq(s.subrange(0, 0)) == 0",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "sum_seq": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "sum_seq(s.subrange(0, 0))": "pass"
+  },
+  "eq_seeds": {
+   "sum_seq(s.subrange(0, 0)) =~= 0": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-59",
+  "kind": "plain",
+  "expr": "vs.subrange(0, vs.len() - 1) =~= seq![v] + s.subrange(0, s.len() - 1)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "vs.subrange(0, vs.len() - 1)": "fail",
+   "vs.len()": "fail",
+   "seq![v] + s.subrange(0, s.len() - 1)": "fail",
+   "s.subrange(0, s.len() - 1)": "fail",
+   "s.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "vs.subrange(0, vs.len() - 1) =~= seq![v] + s.subrange(0, s.len() - 1)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-98",
+  "kind": "plain",
+  "expr": "s.take(s.len() as int - 1) =~= a.take(i)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s.take(s.len() as int - 1)": "fail",
+   "s.len()": "fail",
+   "a.take(i)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s.take(s.len() as int - 1) =~= a.take(i)": "pass"
+  },
+  "axioms": [
+   "push-subrange",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-99",
+  "kind": "plain",
+  "expr": "s.take(s.len() as int - 1) =~= a.take(i)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s.take(s.len() as int - 1)": "fail",
+   "s.len()": "fail",
+   "a.take(i)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s.take(s.len() as int - 1) =~= a.take(i)": "pass"
+  },
+  "axioms": [
+   "push-subrange",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-100",
+  "kind": "plain",
+  "expr": "a_spec.take(n as int) =~= a_spec",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a_spec.take(n as int)": "fail"
+  },
+  "eq_seeds": {
+   "a_spec.take(n as int) =~= a_spec": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-325",
+  "kind": "forall",
+  "expr": "forall|d_prime: int| d_prime != 0 implies #[trigger] cpd(a_spec, d_prime) < ceil_half(a_spec.len() as int)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-101",
+  "kind": "plain",
+  "expr": "s.subrange(1, s.len() as int) =~= tail",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s.subrange(1, s.len() as int)": "fail",
+   "s.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s.subrange(1, s.len() as int) =~= tail": "pass"
+  },
+  "axioms": [
+   "add-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-104",
+  "kind": "plain",
+  "expr": "2 * half * (n + 1) == 2 * (half * (n + 1))",
+  "tactic": "nonlinear_arith",
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "2 * half * (n + 1)": "timeout",
+   "2 * (half * (n + 1))": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {
+   "2 * half * (n + 1) =~= 2 * (half * (n + 1))": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-105",
+  "kind": "plain",
+  "expr": "n * (2 * half1) == 2 * (n * half1)",
+  "tactic": "nonlinear_arith",
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "n * (2 * half1)": "timeout",
+   "2 * (n * half1)": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {
+   "n * (2 * half1) =~= 2 * (n * half1)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-106",
+  "kind": "plain",
+  "expr": "ni * (ni + 1) == pi * (pi + 1) + 8 * pi + 20",
+  "tactic": "nonlinear_arith",
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "ni * (ni + 1)": "timeout",
+   "pi * (pi + 1) + 8 * pi + 20": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {
+   "ni * (ni + 1) =~= pi * (pi + 1) + 8 * pi + 20": "timeout"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-338",
+  "kind": "forall",
+  "expr": "forall|p: int| #![auto] 0 <= p < m implies\n            (a_vec[p] <==> forall|idx2: int| 0 <= idx2 < (i + 1) as int ==> !point_in_segment(p + 1, seg_spec[idx2]))",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-340",
+  "kind": "plain",
+  "expr": "a_vec[p] == a_before[p]",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a_vec[p]": "fail",
+   "a_before[p]": "pass"
+  },
+  "eq_seeds": {
+   "a_vec[p] =~= a_before[p]": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-112",
+  "kind": "plain",
+  "expr": "to_spec_result(result@.push((k + 1) as i64)) =~= old_s.push((k + 1) as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "to_spec_result(result@.push((k + 1) as i64))": "fail",
+   "result@.push((k + 1) as i64)": "fail",
+   "old_s.push((k + 1) as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "to_spec_result(result@.push((k + 1) as i64)) =~= old_s.push((k + 1) as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-118",
+  "kind": "plain",
+  "expr": "(ri / ms) * mb <= 1_000_000_000 * 1_000_000_000",
+  "tactic": "nonlinear_arith",
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "(ri / ms) * mb": "timeout",
+   "1_000_000_000 * 1_000_000_000": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-120",
+  "kind": "forall",
+  "expr": "forall|ii: int, jj: int, kk: nat|\n                #![trigger outcome(r_int, s_spec[ii], b_spec[jj], kk as int)]\n                0 <= ii < s_spec.len() && 0 <= jj < b_spec.len() && valid_trade(r_int, s_spec[ii], kk as int)\n                implies outcome(r_int, s_spec[ii], b_spec[jj], kk as int) <= mb_int",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "timeout",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-131",
+  "kind": "plain",
+  "expr": "t.take(t.len() - 1) =~= s",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "t.take(t.len() - 1)": "fail",
+   "t.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "t.take(t.len() - 1) =~= s": "pass"
+  },
+  "axioms": [
+   "push-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-132",
+  "kind": "plain",
+  "expr": "si1 =~= si.push(s@[i as int])",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "si.push(s@[i as int])": "fail",
+   "s@[i as int]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "si1 =~= si.push(s@[i as int])": "pass"
+  },
+  "axioms": [
+   "subrange-subrange",
+   "subrange-push"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-133",
+  "kind": "plain",
+  "expr": "s@.take(s@.len() as int) =~= s@",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s@.take(s@.len() as int)": "fail",
+   "s@.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s@.take(s@.len() as int) =~= s@": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-134",
+  "kind": "plain",
+  "expr": "t.take(t.len() as int - 1) =~= s.take(i)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "t.take(t.len() as int - 1)": "fail",
+   "t.len()": "fail",
+   "s.take(i)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "t.take(t.len() as int - 1) =~= s.take(i)": "fail"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-139",
+  "kind": "plain",
+  "expr": "valid_selection(pa, pb, pc, len, a, b, c)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "valid_selection(pa, pb, pc, len, a, b, c)": "fail"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-140",
+  "kind": "plain",
+  "expr": "s@.take(i as int + 1).drop_last() =~= s@.take(i as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s@.take(i as int + 1).drop_last()": "fail",
+   "s@.take(i as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s@.take(i as int + 1).drop_last() =~= s@.take(i as int)": "fail"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-141",
+  "kind": "plain",
+  "expr": "s@.take(s@.len() as int) =~= s@",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s@.take(s@.len() as int)": "fail",
+   "s@.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s@.take(s@.len() as int) =~= s@": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-142",
+  "kind": "plain",
+  "expr": "good_witness(s@, s@.len() as int, count as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "good_witness(s@, s@.len() as int, count as int)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-144",
+  "kind": "plain",
+  "expr": "is_playable(hand_spec[i as int], table@)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "is_playable(hand_spec[i as int], table@)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-147",
+  "kind": "plain",
+  "expr": "s@.subrange(0, (i + 1) as int).subrange(0, i as int) =~= s@.subrange(0, i as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s@.subrange(0, (i + 1) as int).subrange(0, i as int)": "fail",
+   "s@.subrange(0, i as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s@.subrange(0, (i + 1) as int).subrange(0, i as int) =~= s@.subrange(0, i as int)": "fail"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-150",
+  "kind": "plain",
+  "expr": "s@.subrange(0, s@.len() as int) =~= s@",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s@.subrange(0, s@.len() as int)": "fail",
+   "s@.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s@.subrange(0, s@.len() as int) =~= s@": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-153",
+  "kind": "plain",
+  "expr": "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, true, false, false) ==\n                       FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, false, true, true)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, true, false, false)": "pass"
+  },
+  "eq_seeds": {
+   "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, true, false, false) =~= FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, false, true, true)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-154",
+  "kind": "plain",
+  "expr": "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, false, true, false) ==\n                       FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, true, false, true)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, false, true, false)": "pass"
+  },
+  "eq_seeds": {
+   "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, false, true, false) =~= FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, true, false, true)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-155",
+  "kind": "plain",
+  "expr": "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, false, false, true) ==\n                       FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, true, true, false)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, false, false, true)": "pass"
+  },
+  "eq_seeds": {
+   "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, false, false, true) =~= FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, true, true, false)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-156",
+  "kind": "plain",
+  "expr": "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, false, false, true) ==\n                       FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, true, true, false)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, false, false, true)": "pass"
+  },
+  "eq_seeds": {
+   "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, false, false, true) =~= FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, true, true, false)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-157",
+  "kind": "plain",
+  "expr": "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, false, true, false) ==\n                       FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, true, false, true)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, false, true, false)": "pass"
+  },
+  "eq_seeds": {
+   "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, false, true, false) =~= FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, true, false, true)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-158",
+  "kind": "plain",
+  "expr": "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, true, false, false) ==\n                       FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, false, true, true)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, true, false, false)": "pass"
+  },
+  "eq_seeds": {
+   "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, true, false, false) =~= FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, false, true, true)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-159",
+  "kind": "plain",
+  "expr": "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, false, false, false) ==\n                       FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, true, true, true)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, false, false, false)": "pass"
+  },
+  "eq_seeds": {
+   "FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, true, false, false, false) =~= FriendSum(a1 as int, a2 as int, a3 as int, a4 as int, false, true, true, true)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-160",
+  "kind": "plain",
+  "expr": "seq![x].subrange(0, 0) =~= Seq::<Seq<char>>::empty()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "seq![x].subrange(0, 0)": "fail",
+   "subrange(0, 0)": "invalid",
+   "Seq::<Seq<char>>::empty()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "seq![x].subrange(0, 0) =~= Seq::<Seq<char>>::empty()": "fail"
+  },
+  "axioms": [
+   "push-subrange",
+   "subrange-empty"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-161",
+  "kind": "plain",
+  "expr": "flatten(Seq::<Seq<char>>::empty()) =~= Seq::<char>::empty()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "flatten": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "flatten(Seq::<Seq<char>>::empty())": "pass"
+  },
+  "eq_seeds": {
+   "flatten(Seq::<Seq<char>>::empty()) =~= Seq::<char>::empty()": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST",
+   "AX"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-162",
+  "kind": "plain",
+  "expr": "seq![a, b].subrange(0, 1) =~= seq![a]",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "seq![a, b].subrange(0, 1)": "fail",
+   "subrange(0, 1)": "invalid",
+   "seq![a]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "seq![a, b].subrange(0, 1) =~= seq![a]": "fail"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-355",
+  "kind": "plain",
+  "expr": "new_prefix.subrange(0, new_prefix.len() - 1) =~= old_prefix",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "new_prefix.subrange(0, new_prefix.len() - 1)": "fail",
+   "new_prefix.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "new_prefix.subrange(0, new_prefix.len() - 1) =~= old_prefix": "fail"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-356",
+  "kind": "plain",
+  "expr": "s@.subrange(0, s@.len() as int) =~= s@",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s@.subrange(0, s@.len() as int)": "fail",
+   "s@.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s@.subrange(0, s@.len() as int) =~= s@": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-357",
+  "kind": "plain",
+  "expr": "spec_parts =~= seq![s@]",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "seq![s@]": "fail"
+  },
+  "eq_seeds": {
+   "spec_parts =~= seq![s@]": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-358",
+  "kind": "plain",
+  "expr": "spec_parts =~= seq![first@, second@]",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "seq![first@, second@]": "timeout"
+  },
+  "eq_seeds": {
+   "spec_parts =~= seq![first@, second@]": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-359",
+  "kind": "plain",
+  "expr": "is_good(second_spec)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "is_good(second_spec)": "timeout",
+   "second_spec.len()": "timeout",
+   "second_spec.subrange(0, 0)": "timeout",
+   "Seq::<char>::empty()": "timeout",
+   "count_char(Seq::<char>::empty(), '0')": "timeout",
+   "count_char(Seq::<char>::empty(), '1')": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-360",
+  "kind": "plain",
+  "expr": "second_spec.subrange(0, 0) =~= Seq::<char>::empty()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "second_spec.subrange(0, 0)": "timeout",
+   "Seq::<char>::empty()": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {
+   "second_spec.subrange(0, 0) =~= Seq::<char>::empty()": "pass"
+  },
+  "axioms": [
+   "subrange-empty"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-361",
+  "kind": "plain",
+  "expr": "count_char(Seq::<char>::empty(), '0') == 0",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "count_char": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "count_char(Seq::<char>::empty(), '0')": "pass"
+  },
+  "eq_seeds": {
+   "count_char(Seq::<char>::empty(), '0') =~= 0": "pass"
+  },
+  "axioms": [
+   "subrange-empty"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST",
+   "AX"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-362",
+  "kind": "plain",
+  "expr": "count_char(Seq::<char>::empty(), '1') == 0",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "count_char": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "count_char(Seq::<char>::empty(), '1')": "pass"
+  },
+  "eq_seeds": {
+   "count_char(Seq::<char>::empty(), '1') =~= 0": "pass"
+  },
+  "axioms": [
+   "subrange-empty"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST",
+   "AX"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-452",
+  "kind": "plain",
+  "expr": "spec_parts[0] =~= first@",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "spec_parts[0]": "fail"
+  },
+  "eq_seeds": {
+   "spec_parts[0] =~= first@": "pass"
+  },
+  "axioms": [
+   "push-subrange",
+   "subrange-subrange",
+   "add-subrange",
+   "subrange-empty"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-363",
+  "kind": "forall",
+  "expr": "forall|mask: int| 0 <= mask < 512 implies !(pop_count(mask) <= 0 && can_make_sum(n, mask))",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "pop_count": "fail"
+  },
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-364",
+  "kind": "forall",
+  "expr": "forall|k: int| 0 <= k < n implies digits_spec[k] == ones_seq(n as int)[k]",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "ones_seq": "fail"
+  },
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-164",
+  "kind": "plain",
+  "expr": "digits_spec =~= ones_seq(n as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "ones_seq": "fail"
+  },
+  "bridge": null,
+  "seeds": {
+   "ones_seq(n as int)": "fail"
+  },
+  "eq_seeds": {
+   "digits_spec =~= ones_seq(n as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-165",
+  "kind": "plain",
+  "expr": "s1.subrange(0, s1.len() - 1) =~= s.subrange(0, i)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s1.subrange(0, s1.len() - 1)": "fail",
+   "s1.len()": "fail",
+   "s.subrange(0, i)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s1.subrange(0, s1.len() - 1) =~= s.subrange(0, i)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-166",
+  "kind": "plain",
+  "expr": "c.subrange(0, 0) =~= Seq::<int>::empty()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "c.subrange(0, 0)": "fail",
+   "Seq::<int>::empty()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "c.subrange(0, 0) =~= Seq::<int>::empty()": "fail"
+  },
+  "axioms": [
+   "push-subrange",
+   "subrange-empty"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-167",
+  "kind": "plain",
+  "expr": "coalition_seat_sum(a, Seq::<int>::empty()) == 0",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "coalition_seat_sum": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "coalition_seat_sum(a, Seq::<int>::empty())": "pass"
+  },
+  "eq_seeds": {
+   "coalition_seat_sum(a, Seq::<int>::empty()) =~= 0": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-168",
+  "kind": "plain",
+  "expr": "cp.subrange(0, cp.len() - 1) =~= c",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "cp.subrange(0, cp.len() - 1)": "fail",
+   "cp.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "cp.subrange(0, cp.len() - 1) =~= c": "pass"
+  },
+  "axioms": [
+   "push-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-365",
+  "kind": "plain",
+  "expr": "s.subrange(0, s.len() - 1) =~= a.subrange(0, j)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s.subrange(0, s.len() - 1)": "fail",
+   "s.len()": "fail",
+   "a.subrange(0, j)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s.subrange(0, s.len() - 1) =~= a.subrange(0, j)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-169",
+  "kind": "plain",
+  "expr": "curr.subrange(0, curr.len() - 1) =~= prev",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "curr.subrange(0, curr.len() - 1)": "fail",
+   "curr.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "curr.subrange(0, curr.len() - 1) =~= prev": "pass"
+  },
+  "axioms": [
+   "push-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-170",
+  "kind": "plain",
+  "expr": "s@.subrange(0, s@.len() as int) =~= s@",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s@.subrange(0, s@.len() as int)": "fail",
+   "s@.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s@.subrange(0, s@.len() as int) =~= s@": "fail"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-171",
+  "kind": "plain",
+  "expr": "feasible(a as int, b as int, c as int, rem as int, c2 as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "feasible(a as int, b as int, c as int, rem as int, c2 as int)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-172",
+  "kind": "forall",
+  "expr": "forall|x: int, y: int| feasible(a as int, b as int, c as int, x, y)\n            implies stones_collected(x, y) <= max_stones as int",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "pass",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-376",
+  "kind": "plain",
+  "expr": "exists|s: int| 0 <= s <= a_ && candies_after_division(b_, c_, a_, s) == r",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "candies_after_division(b_, c_, a_, s)": "invalid",
+   "b_ + s": "invalid",
+   "c_ + (a_ - s)": "invalid"
+  },
+  "eq_seeds": {
+   "candies_after_division(b_, c_, a_, s) =~= r": "invalid"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-377",
+  "kind": "plain",
+  "expr": "candies_after_division(b_, c_, a_, s) == r",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "candies_after_division(b_, c_, a_, s)": "pass"
+  },
+  "eq_seeds": {
+   "candies_after_division(b_, c_, a_, s) =~= r": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-378",
+  "kind": "plain",
+  "expr": "exists|s: int| 0 <= s <= b_ && candies_after_division(a_, c_, b_, s) == r",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "candies_after_division(a_, c_, b_, s)": "invalid",
+   "a_ + s": "invalid",
+   "c_ + (b_ - s)": "invalid"
+  },
+  "eq_seeds": {
+   "candies_after_division(a_, c_, b_, s) =~= r": "invalid"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-379",
+  "kind": "plain",
+  "expr": "candies_after_division(a_, c_, b_, s) == r",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "candies_after_division(a_, c_, b_, s)": "pass"
+  },
+  "eq_seeds": {
+   "candies_after_division(a_, c_, b_, s) =~= r": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-380",
+  "kind": "plain",
+  "expr": "exists|s: int| 0 <= s <= c_ && candies_after_division(a_, b_, c_, s) == r",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "candies_after_division(a_, b_, c_, s)": "invalid",
+   "a_ + s": "invalid",
+   "b_ + (c_ - s)": "invalid"
+  },
+  "eq_seeds": {
+   "candies_after_division(a_, b_, c_, s) =~= r": "invalid"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-381",
+  "kind": "plain",
+  "expr": "candies_after_division(a_, b_, c_, s) == r",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "candies_after_division(a_, b_, c_, s)": "pass"
+  },
+  "eq_seeds": {
+   "candies_after_division(a_, b_, c_, s) =~= r": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-173",
+  "kind": "plain",
+  "expr": "prefix_plus.subrange(0, prefix_plus.len() as int - 1) =~= prefix",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "prefix_plus.subrange(0, prefix_plus.len() as int - 1)": "fail",
+   "prefix_plus.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "prefix_plus.subrange(0, prefix_plus.len() as int - 1) =~= prefix": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-174",
+  "kind": "plain",
+  "expr": "events_spec.subrange(0, idx as int) =~= events_spec",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "events_spec.subrange(0, idx as int)": "fail"
+  },
+  "eq_seeds": {
+   "events_spec.subrange(0, idx as int) =~= events_spec": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-382",
+  "kind": "forall",
+  "expr": "forall|k: int| 0 <= k && k < orig.len() implies (orig[k] as int <= bound)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-180",
+  "kind": "forall",
+  "expr": "forall|v: i64| #![auto] m2.count(v) == m.count(v)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-383",
+  "kind": "plain",
+  "expr": "sorted_a@ =~= vec_a@",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {},
+  "eq_seeds": {
+   "sorted_a@ =~= vec_a@": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-384",
+  "kind": "plain",
+  "expr": "sorted_b@ =~= vec_b@",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {},
+  "eq_seeds": {
+   "sorted_b@ =~= vec_b@": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-181",
+  "kind": "plain",
+  "expr": "s.subrange(0, (i + 1) as int).subrange(0, i as int) =~= s.subrange(0, i as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s.subrange(0, (i + 1) as int).subrange(0, i as int)": "fail",
+   "s.subrange(0, i as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s.subrange(0, (i + 1) as int).subrange(0, i as int) =~= s.subrange(0, i as int)": "fail"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-182",
+  "kind": "plain",
+  "expr": "Seq::new(n as nat, |i: int| 1int).subrange(0, (n - 1) as int) =~= Seq::new((n - 1) as nat, |i: int| 1int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "Seq::new(n as nat, |i: int| 1int).subrange(0, (n - 1) as int)": "fail",
+   "Seq::new((n - 1) as nat, |i: int| 1int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "Seq::new(n as nat, |i: int| 1int).subrange(0, (n - 1) as int) =~= Seq::new((n - 1) as nat, |i: int| 1int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-183",
+  "kind": "plain",
+  "expr": "Seq::new(n as nat, |i: int| 0int).subrange(0, (n - 1) as int) =~= Seq::new((n - 1) as nat, |i: int| 0int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "Seq::new(n as nat, |i: int| 0int).subrange(0, (n - 1) as int)": "fail",
+   "Seq::new((n - 1) as nat, |i: int| 0int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "Seq::new(n as nat, |i: int| 0int).subrange(0, (n - 1) as int) =~= Seq::new((n - 1) as nat, |i: int| 0int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-184",
+  "kind": "plain",
+  "expr": "(a + b).subrange(0, (a + b).len() - 1) =~= a + b.subrange(0, b.len() - 1)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "(a + b).subrange(0, (a + b).len() - 1)": "fail",
+   "(a + b).len()": "fail",
+   "a + b.subrange(0, b.len() - 1)": "fail",
+   "b.subrange(0, b.len() - 1)": "fail",
+   "b.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "(a + b).subrange(0, (a + b).len() - 1) =~= a + b.subrange(0, b.len() - 1)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-385",
+  "kind": "plain",
+  "expr": "s@.subrange(0, s@.len() as int) =~= s@",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s@.subrange(0, s@.len() as int)": "fail",
+   "s@.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s@.subrange(0, s@.len() as int) =~= s@": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-386",
+  "kind": "plain",
+  "expr": "result_seq =~= ones_seq + zeros_seq",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "ones_seq + zeros_seq": "fail"
+  },
+  "eq_seeds": {
+   "result_seq =~= ones_seq + zeros_seq": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-388",
+  "kind": "plain",
+  "expr": "IsComposite(a as int)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "IsComposite(a as int)": "fail",
+   "a as int % 3": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-389",
+  "kind": "plain",
+  "expr": "IsComposite(b as int)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "IsComposite(b as int)": "fail",
+   "b as int % 2": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-390",
+  "kind": "plain",
+  "expr": "s.push(c).subrange(0, s.len() as int) =~= s",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s.push(c).subrange(0, s.len() as int)": "fail",
+   "s.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s.push(c).subrange(0, s.len() as int) =~= s": "fail"
+  },
+  "axioms": [
+   "push-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-391",
+  "kind": "plain",
+  "expr": "s + seq![a, b] =~= s.push(a).push(b)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s + seq![a, b]": "fail",
+   "s.push(a).push(b)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s + seq![a, b] =~= s.push(a).push(b)": "fail"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-392",
+  "kind": "plain",
+  "expr": "s1.push(a).subrange(0, s1.len() as int) =~= s1",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s1.push(a).subrange(0, s1.len() as int)": "fail",
+   "s1.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s1.push(a).subrange(0, s1.len() as int) =~= s1": "fail"
+  },
+  "axioms": [
+   "push-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-393",
+  "kind": "plain",
+  "expr": "s2.push(b).subrange(0, s2.len() as int) =~= s2",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s2.push(b).subrange(0, s2.len() as int)": "fail",
+   "s2.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s2.push(b).subrange(0, s2.len() as int) =~= s2": "pass"
+  },
+  "axioms": [
+   "push-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-394",
+  "kind": "plain",
+  "expr": "s1 + seq![a1, a2] =~= s1.push(a1).push(a2)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s1 + seq![a1, a2]": "fail",
+   "s1.push(a1).push(a2)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s1 + seq![a1, a2] =~= s1.push(a1).push(a2)": "fail"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-395",
+  "kind": "plain",
+  "expr": "s2 + seq![b1, b2] =~= s2.push(b1).push(b2)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s2 + seq![b1, b2]": "fail",
+   "s2.push(b1).push(b2)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s2 + seq![b1, b2] =~= s2.push(b1).push(b2)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-396",
+  "kind": "plain",
+  "expr": "s2.subrange(0, s2.len() - 2) =~= s",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s2.subrange(0, s2.len() - 2)": "fail",
+   "s2.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s2.subrange(0, s2.len() - 2) =~= s": "pass"
+  },
+  "axioms": [
+   "push-subrange",
+   "add-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-397",
+  "kind": "forall",
+  "expr": "forall|k: int|\n        1 <= k <= r.len() / 2 implies #[trigger] count_char(r.subrange(0, 2 * k), 'a')\n        == count_char(r.subrange(0, 2 * k), 'b')",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "count_char": "timeout"
+  },
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": true,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-398",
+  "kind": "plain",
+  "expr": "r.subrange(0, 2 * k) =~= result.subrange(0, 2 * k)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "r.subrange(0, 2 * k)": "fail",
+   "result.subrange(0, 2 * k)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "r.subrange(0, 2 * k) =~= result.subrange(0, 2 * k)": "pass"
+  },
+  "axioms": [
+   "push-subrange",
+   "add-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": true,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-399",
+  "kind": "plain",
+  "expr": "r.subrange(0, 2 * k) =~= r",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "r.subrange(0, 2 * k)": "fail"
+  },
+  "eq_seeds": {
+   "r.subrange(0, 2 * k) =~= r": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": true,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-400",
+  "kind": "plain",
+  "expr": "s@.subrange(0, i as int) + seq![s@[i as int], s@[(i + 1) as int]]\n                =~= s@.subrange(0, (i + 2) as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s@.subrange(0, i as int) + seq![s@[i as int], s@[(i + 1) as int]]": "fail",
+   "s@.subrange(0, i as int)": "fail",
+   "s@[i as int]": "fail",
+   "s@[(i + 1) as int]": "fail",
+   "s@.subrange(0, (i + 2) as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s@.subrange(0, i as int) + seq![s@[i as int], s@[(i + 1) as int]] =~= s@.subrange(0, (i + 2) as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-401",
+  "kind": "plain",
+  "expr": "result@ + seq![a, b] =~= result@.push(a).push(b)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "result@ + seq![a, b]": "fail",
+   "result@.push(a).push(b)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "result@ + seq![a, b] =~= result@.push(a).push(b)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-402",
+  "kind": "plain",
+  "expr": "s@.subrange(0, s@.len() as int) =~= s@",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s@.subrange(0, s@.len() as int)": "fail",
+   "s@.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s@.subrange(0, s@.len() as int) =~= s@": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-189",
+  "kind": "plain",
+  "expr": "s.take(s.len() as int - 1) =~= sentences.take(i)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s.take(s.len() as int - 1)": "fail",
+   "s.len()": "fail",
+   "sentences.take(i)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s.take(s.len() as int - 1) =~= sentences.take(i)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-190",
+  "kind": "plain",
+  "expr": "sentences.take(sentences.len() as int) =~= sentences",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "sentences.take(sentences.len() as int)": "fail",
+   "sentences.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "sentences.take(sentences.len() as int) =~= sentences": "fail"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-205",
+  "kind": "plain",
+  "expr": "steps < n",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-206",
+  "kind": "plain",
+  "expr": "swap_cost(a as int, b as int, la as int, lb as int) == da as int + db as int",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "swap_cost(a as int, b as int, la as int, lb as int)": "pass"
+  },
+  "eq_seeds": {
+   "swap_cost(a as int, b as int, la as int, lb as int) =~= da as int + db as int": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-207",
+  "kind": "plain",
+  "expr": "swap_cost(a as int, b as int, lb as int, la as int) == da as int + db as int",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "swap_cost(a as int, b as int, lb as int, la as int)": "pass"
+  },
+  "eq_seeds": {
+   "swap_cost(a as int, b as int, lb as int, la as int) =~= da as int + db as int": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-208",
+  "kind": "forall",
+  "expr": "forall|k: int| 0 <= k < s.len() - 1 implies s.take(s.len() as int - 1)[k] == s[k]",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "pass",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-405",
+  "kind": "forall",
+  "expr": "forall|c2: int| #![auto] s2.contains(c2) implies\n            player1_can_win(s1.union(Set::empty().insert(c2)), s2.remove(c2), (s2.len() - 1) as nat)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "player1_can_win": "timeout"
+  },
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-210",
+  "kind": "plain",
+  "expr": "a_spec[i as int] == a[i as int] as int",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a_spec[i as int]": "fail",
+   "a[i as int] as int": "fail",
+   "a[i as int]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a_spec[i as int] =~= a[i as int] as int": "fail"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-211",
+  "kind": "plain",
+  "expr": "b_spec[j as int] == b[j as int] as int",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "b_spec[j as int]": "fail",
+   "b[j as int] as int": "fail",
+   "b[j as int]": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "b_spec[j as int] =~= b[j as int] as int": "fail"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-406",
+  "kind": "forall",
+  "expr": "forall|x: int| seq_to_set(a_spec).contains(x) implies x <= max_a as int",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "seq_to_set": "timeout"
+  },
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-407",
+  "kind": "forall",
+  "expr": "forall|x: int| seq_to_set(b_spec).contains(x) implies x <= max_b as int",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "seq_to_set": "timeout"
+  },
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-408",
+  "kind": "forall",
+  "expr": "forall|steps: nat|\n                !player1_can_win(seq_to_set(a_spec), seq_to_set(b_spec), steps)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "player1_can_win": "timeout",
+   "seq_to_set": "fail",
+   "<all>": "timeout"
+  },
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-219",
+  "kind": "plain",
+  "expr": "d.take(d.len() - 1) =~= digits((n / 10) as nat)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {
+   "digits": "invalid"
+  },
+  "bridge": null,
+  "seeds": {
+   "d.take(d.len() - 1)": "fail",
+   "d.len()": "fail",
+   "digits((n / 10) as nat)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "d.take(d.len() - 1) =~= digits((n / 10) as nat)": "pass"
+  },
+  "axioms": [
+   "push-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": true,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-410",
+  "kind": "forall",
+  "expr": "forall|i: int| 0 <= i < d2.len() implies is_lucky_digit(#[trigger] d2[i])",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-411",
+  "kind": "plain",
+  "expr": "d2[i] == d[i]",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "d2[i]": "fail",
+   "d[i]": "pass"
+  },
+  "eq_seeds": {
+   "d2[i] =~= d[i]": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-221",
+  "kind": "plain",
+  "expr": "pow10(0nat) == 1nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(0nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(0nat) =~= 1nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-222",
+  "kind": "plain",
+  "expr": "pow10(1nat) == 10nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(1nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(1nat) =~= 10nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-223",
+  "kind": "plain",
+  "expr": "pow10(2nat) == 100nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(2nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(2nat) =~= 100nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-224",
+  "kind": "plain",
+  "expr": "pow10(3nat) == 1000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(3nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(3nat) =~= 1000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-225",
+  "kind": "plain",
+  "expr": "pow10(4nat) == 10000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(4nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(4nat) =~= 10000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-226",
+  "kind": "plain",
+  "expr": "pow10(5nat) == 100000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(5nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(5nat) =~= 100000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-227",
+  "kind": "plain",
+  "expr": "pow10(6nat) == 1000000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(6nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(6nat) =~= 1000000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-228",
+  "kind": "plain",
+  "expr": "pow10(7nat) == 10000000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(7nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(7nat) =~= 10000000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-229",
+  "kind": "plain",
+  "expr": "pow10(8nat) == 100000000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(8nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(8nat) =~= 100000000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-230",
+  "kind": "plain",
+  "expr": "pow10(9nat) == 1000000000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(9nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(9nat) =~= 1000000000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-231",
+  "kind": "plain",
+  "expr": "pow10(10nat) == 10000000000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(10nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(10nat) =~= 10000000000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-232",
+  "kind": "plain",
+  "expr": "pow10(11nat) == 100000000000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(11nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(11nat) =~= 100000000000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-233",
+  "kind": "plain",
+  "expr": "pow10(12nat) == 1000000000000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(12nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(12nat) =~= 1000000000000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-234",
+  "kind": "plain",
+  "expr": "pow10(13nat) == 10000000000000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(13nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(13nat) =~= 10000000000000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-235",
+  "kind": "plain",
+  "expr": "pow10(14nat) == 100000000000000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(14nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(14nat) =~= 100000000000000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-236",
+  "kind": "plain",
+  "expr": "pow10(15nat) == 1000000000000000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(15nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(15nat) =~= 1000000000000000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-237",
+  "kind": "plain",
+  "expr": "pow10(16nat) == 10000000000000000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(16nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(16nat) =~= 10000000000000000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-238",
+  "kind": "plain",
+  "expr": "pow10(17nat) == 100000000000000000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(17nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(17nat) =~= 100000000000000000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-239",
+  "kind": "plain",
+  "expr": "pow10(18nat) == 1000000000000000000nat",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {
+   "pow10": "pass"
+  },
+  "bridge": null,
+  "seeds": {
+   "pow10(18nat)": "pass"
+  },
+  "eq_seeds": {
+   "pow10(18nat) =~= 1000000000000000000nat": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "FUEL",
+   "INST"
+  ],
+  "label": "FUEL"
+ },
+ {
+  "key": "V-240",
+  "kind": "plain",
+  "expr": "t.take(t.len() as int - 1) =~= s.take(i)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "t.take(t.len() as int - 1)": "fail",
+   "t.len()": "fail",
+   "s.take(i)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "t.take(t.len() as int - 1) =~= s.take(i)": "fail"
+  },
+  "axioms": [
+   "push-subrange",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-242",
+  "kind": "plain",
+  "expr": "a_spec.take(a_spec.len() as int) =~= a_spec",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a_spec.take(a_spec.len() as int)": "fail",
+   "a_spec.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a_spec.take(a_spec.len() as int) =~= a_spec": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-243",
+  "kind": "plain",
+  "expr": "a_spec.take(a_spec.len() as int) =~= a_spec",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a_spec.take(a_spec.len() as int)": "fail",
+   "a_spec.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a_spec.take(a_spec.len() as int) =~= a_spec": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-249",
+  "kind": "forall",
+  "expr": "forall|t_prime: int| t_prime >= 1 implies !MeetAt(x as int, y as int, a as int, b as int, t_prime)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "timeout",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-252",
+  "kind": "plain",
+  "expr": "t.drop_last() =~= s",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "t.drop_last()": "fail"
+  },
+  "eq_seeds": {
+   "t.drop_last() =~= s": "pass"
+  },
+  "axioms": [
+   "push-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-413",
+  "kind": "plain",
+  "expr": "forall|c_prime: int| 0 <= c_prime < prev_cap ==> !is_valid_capacity(c_prime, n, a, b)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-414",
+  "kind": "forall",
+  "expr": "forall|c_prime: int| 0 <= c_prime < prev_cap implies !is_valid_capacity(c_prime, n, a, b)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-415",
+  "kind": "plain",
+  "expr": "is_valid_capacity(c_prime, n - 1, a, b)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "is_valid_capacity(c_prime, n - 1, a, b)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-421",
+  "kind": "forall",
+  "expr": "forall|ai: int, bi: int| 1 <= ai && ai < n && ai < bi && bi <= n implies #[trigger] gcd(ai, bi) <= result",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "gcd": "fail"
+  },
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-422",
+  "kind": "plain",
+  "expr": "c_spec =~= seq![val as int]",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "seq![val as int]": "fail"
+  },
+  "eq_seeds": {
+   "c_spec =~= seq![val as int]": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-423",
+  "kind": "forall",
+  "expr": "forall|len: nat|\n            1 <= len <= min_nat(a_spec@.len() as nat, b_spec@.len() as nat)\n            implies !#[trigger] exists_common_subseq_of_len(a_spec@, b_spec@, len)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "exists_common_subseq_of_len": "timeout"
+  },
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-424",
+  "kind": "forall",
+  "expr": "forall|ii: int, jj: int| 0 <= ii <= jj < ps.len() implies\n            #[trigger] or_of_seq(ps.subrange(ii, jj + 1)) >= jj - ii + 1",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "or_of_seq": "fail"
+  },
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-257",
+  "kind": "plain",
+  "expr": "is_minimal_bounding_box(gv, result_spec, top as int, bottom as int, left as int, right as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "is_minimal_bounding_box(gv, result_spec, top as int, bottom as int, left as int, right as int)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-261",
+  "kind": "plain",
+  "expr": "s1.push(x).skip(1) =~= s1.skip(1).push(x)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s1.push(x).skip(1)": "timeout",
+   "s1.skip(1).push(x)": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {
+   "s1.push(x).skip(1) =~= s1.skip(1).push(x)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-265",
+  "kind": "plain",
+  "expr": "s2.push(x).skip(1) =~= s2.skip(1).push(x)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s2.push(x).skip(1)": "timeout",
+   "s2.skip(1).push(x)": "timeout",
+   "<all>": "timeout"
+  },
+  "eq_seeds": {
+   "s2.push(x).skip(1) =~= s2.skip(1).push(x)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-266",
+  "kind": "plain",
+  "expr": "a_spec.take(i as int).push(ai as int) =~= a_spec.take((i + 1) as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a_spec.take(i as int).push(ai as int)": "fail",
+   "a_spec.take((i + 1) as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a_spec.take(i as int).push(ai as int) =~= a_spec.take((i + 1) as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-267",
+  "kind": "plain",
+  "expr": "new_p_spec =~= old_p_spec.push(ai as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "old_p_spec.push(ai as int)": "fail"
+  },
+  "eq_seeds": {
+   "new_p_spec =~= old_p_spec.push(ai as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-268",
+  "kind": "plain",
+  "expr": "a_spec.take(i as int).push(ai as int) =~= a_spec.take((i + 1) as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a_spec.take(i as int).push(ai as int)": "fail",
+   "a_spec.take((i + 1) as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a_spec.take(i as int).push(ai as int) =~= a_spec.take((i + 1) as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-269",
+  "kind": "plain",
+  "expr": "a_spec.take(a_spec.len() as int) =~= a_spec",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a_spec.take(a_spec.len() as int)": "fail",
+   "a_spec.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a_spec.take(a_spec.len() as int) =~= a_spec": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-270",
+  "kind": "plain",
+  "expr": "s2 =~= p_spec",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {},
+  "eq_seeds": {
+   "s2 =~= p_spec": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-271",
+  "kind": "plain",
+  "expr": "s@.take(n as int) =~= s@",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s@.take(n as int)": "fail"
+  },
+  "eq_seeds": {
+   "s@.take(n as int) =~= s@": "fail"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-272",
+  "kind": "plain",
+  "expr": "s@.take((n - trailing) as int).drop_last() =~= s@.take((n - trailing - 1) as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s@.take((n - trailing) as int).drop_last()": "fail",
+   "s@.take((n - trailing - 1) as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s@.take((n - trailing) as int).drop_last() =~= s@.take((n - trailing - 1) as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-274",
+  "kind": "plain",
+  "expr": "a_prime.take(a_prime.len() as int - 1) =~= a",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a_prime.take(a_prime.len() as int - 1)": "fail",
+   "a_prime.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a_prime.take(a_prime.len() as int - 1) =~= a": "fail"
+  },
+  "axioms": [
+   "push-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-275",
+  "kind": "plain",
+  "expr": "b_prime.take(b_prime.len() as int - 1) =~= b",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "b_prime.take(b_prime.len() as int - 1)": "fail",
+   "b_prime.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "b_prime.take(b_prime.len() as int - 1) =~= b": "pass"
+  },
+  "axioms": [
+   "push-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-276",
+  "kind": "plain",
+  "expr": "a.take(a.len() as int) =~= a",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a.take(a.len() as int)": "fail",
+   "a.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a.take(a.len() as int) =~= a": "fail"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-277",
+  "kind": "plain",
+  "expr": "a.take(i).push(a[i]) =~= a.take(i + 1)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a.take(i).push(a[i])": "fail",
+   "a[i]": "fail",
+   "a.take(i + 1)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a.take(i).push(a[i]) =~= a.take(i + 1)": "pass"
+  },
+  "axioms": [
+   "subrange-push"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-278",
+  "kind": "plain",
+  "expr": "a.take(i + 1).push(a[i + 1]) =~= a.take(i + 2)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "a.take(i + 1).push(a[i + 1])": "fail",
+   "a[i + 1]": "fail",
+   "a.take(i + 2)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "a.take(i + 1).push(a[i + 1]) =~= a.take(i + 2)": "pass"
+  },
+  "axioms": [
+   "subrange-push"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-438",
+  "kind": "plain",
+  "expr": "r =~= s.reverse()",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s.reverse()": "fail",
+   "r.len()": "fail",
+   "s.reverse().len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "r =~= s.reverse()": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "V-300",
+  "kind": "plain",
+  "expr": "p@[0] != p@[(n - 1) as int]",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "p@[0]": "fail",
+   "p@[(n - 1) as int]": "fail",
+   "all_distinct(pi)": "invalid",
+   "pi[0]": "invalid",
+   "pi[(n - 1) as int]": "invalid",
+   "<all>": "fail"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-439",
+  "kind": "plain",
+  "expr": "pi[0] != pi[(n - 1) as int]",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "pi[0]": "fail",
+   "pi[(n - 1) as int]": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-440",
+  "kind": "plain",
+  "expr": "in_range(rs)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "in_range(rs)": "fail"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-441",
+  "kind": "forall",
+  "expr": "forall|i: int| 0 <= i < rs.len() implies 1 <= #[trigger] rs[i] <= rs.len()",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-442",
+  "kind": "plain",
+  "expr": "all_distinct(rs)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "all_distinct(rs)": "fail",
+   "rs.len()": "fail",
+   "j\n                implies #[trigger] rs[i]": "invalid",
+   "rs[i]": "invalid",
+   "#[trigger] rs[j]": "invalid",
+   "rs[j]": "invalid",
+   "<all>": "fail"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-443",
+  "kind": "forall",
+  "expr": "forall|i: int, j: int|\n                0 <= i < rs.len() && 0 <= j < rs.len() && i != j\n                implies #[trigger] rs[i] != #[trigger] rs[j]",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-444",
+  "kind": "plain",
+  "expr": "rs[i] == ps[(n - 1 - i) as int]",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "rs[i]": "fail",
+   "ps[(n - 1 - i) as int]": "pass"
+  },
+  "eq_seeds": {
+   "rs[i] =~= ps[(n - 1 - i) as int]": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-445",
+  "kind": "plain",
+  "expr": "rs[j] == ps[(n - 1 - j) as int]",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "rs[j]": "fail",
+   "ps[(n - 1 - j) as int]": "pass"
+  },
+  "eq_seeds": {
+   "rs[j] =~= ps[(n - 1 - j) as int]": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-446",
+  "kind": "forall",
+  "expr": "forall|k: int| 0 <= k < (n - 1) implies as_r[k] == as_p[(n - 2 - k) as int]",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "V-302",
+  "kind": "plain",
+  "expr": "is_minimal_side(a_int, b_int, val_int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "is_minimal_side(a_int, b_int, val_int)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "V-453",
+  "kind": "plain",
+  "expr": "sa[0] + sa[1] > sa[sa.len() - 1]",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "sa[0] + sa[1]": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "V-454",
+  "kind": "plain",
+  "expr": "sa[sa.len() - 1] == a@[a@.len() - 1] as int",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "sa[sa.len() - 1]": "timeout",
+   "sa.len()": "pass"
+  },
+  "eq_seeds": {
+   "sa[sa.len() - 1] =~= a@[a@.len() - 1] as int": "timeout"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "VB-0",
+  "kind": "plain",
+  "expr": "divides(factor as nat, candidate as nat)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "divides(factor as nat, candidate as nat)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "VB-1",
+  "kind": "plain",
+  "expr": "arr@.subrange(0, index - 1 as int) == arr@.subrange(0, index as int).drop_last()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.subrange(0, index - 1 as int)": "fail",
+   "arr@.subrange(0, index as int).drop_last()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.subrange(0, index - 1 as int) =~= arr@.subrange(0, index as int).drop_last()": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-2",
+  "kind": "plain",
+  "expr": "arr@ == arr@.subrange(0, index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.subrange(0, index as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr@ =~= arr@.subrange(0, index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-3",
+  "kind": "plain",
+  "expr": "arr@.subrange(0, index - 1 as int) == arr@.subrange(0, index as int).drop_last()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.subrange(0, index - 1 as int)": "fail",
+   "arr@.subrange(0, index as int).drop_last()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.subrange(0, index - 1 as int) =~= arr@.subrange(0, index as int).drop_last()": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-4",
+  "kind": "plain",
+  "expr": "arr@ == arr@.subrange(0, index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.subrange(0, index as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr@ =~= arr@.subrange(0, index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-5",
+  "kind": "plain",
+  "expr": "arr1@.subrange(0, index - 1 as int) == arr1@.subrange(0, index as int).drop_last()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr1@.subrange(0, index - 1 as int)": "fail",
+   "arr1@.subrange(0, index as int).drop_last()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr1@.subrange(0, index - 1 as int) =~= arr1@.subrange(0, index as int).drop_last()": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-6",
+  "kind": "plain",
+  "expr": "arr2@.subrange(0, index - 1 as int) == arr2@.subrange(0, index as int).drop_last()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr2@.subrange(0, index - 1 as int)": "fail",
+   "arr2@.subrange(0, index as int).drop_last()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr2@.subrange(0, index - 1 as int) =~= arr2@.subrange(0, index as int).drop_last()": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-7",
+  "kind": "plain",
+  "expr": "arr3@.subrange(0, index - 1 as int) == arr3@.subrange(0, index as int).drop_last()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr3@.subrange(0, index - 1 as int)": "fail",
+   "arr3@.subrange(0, index as int).drop_last()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr3@.subrange(0, index - 1 as int) =~= arr3@.subrange(0, index as int).drop_last()": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-8",
+  "kind": "plain",
+  "expr": "arr1@ == arr1@.subrange(0, index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr1@.subrange(0, index as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr1@ =~= arr1@.subrange(0, index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-9",
+  "kind": "plain",
+  "expr": "arr2@ == arr2@.subrange(0, index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr2@.subrange(0, index as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr2@ =~= arr2@.subrange(0, index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-10",
+  "kind": "plain",
+  "expr": "arr3@ == arr3@.subrange(0, index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr3@.subrange(0, index as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr3@ =~= arr3@.subrange(0, index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-11",
+  "kind": "plain",
+  "expr": "arr@.subrange(start as int, index as int) =~= arr@.subrange(\n            start as int,\n            (index + 1) as int,\n        ).drop_last()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.subrange(start as int, index as int)": "fail",
+   "arr@.subrange(\n            start as int,\n            (index + 1) as int,\n        ).drop_last()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.subrange(start as int, index as int) =~= arr@.subrange(\n            start as int,\n            (index + 1) as int,\n        ).drop_last()": "fail"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-13",
+  "kind": "plain",
+  "expr": "is_divisible(n as int, index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "is_divisible(n as int, index as int)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "VB-14",
+  "kind": "plain",
+  "expr": "arr@.take((index + 1) as int).drop_last() == arr@.take(index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.take((index + 1) as int).drop_last()": "fail",
+   "arr@.take(index as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.take((index + 1) as int).drop_last() =~= arr@.take(index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-15",
+  "kind": "plain",
+  "expr": "arr@ == arr@.take(input_len as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.take(input_len as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr@ =~= arr@.take(input_len as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-16",
+  "kind": "plain",
+  "expr": "arr@.take((index + 1) as int).drop_last() == arr@.take(index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.take((index + 1) as int).drop_last()": "fail",
+   "arr@.take(index as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.take((index + 1) as int).drop_last() =~= arr@.take(index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-17",
+  "kind": "plain",
+  "expr": "arr@ == arr@.take(input_len as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.take(input_len as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr@ =~= arr@.take(input_len as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-18",
+  "kind": "plain",
+  "expr": "arr@.take((index + 1) as int).drop_last() == arr@.take(index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.take((index + 1) as int).drop_last()": "fail",
+   "arr@.take(index as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.take((index + 1) as int).drop_last() =~= arr@.take(index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-19",
+  "kind": "plain",
+  "expr": "arr@ == arr@.take(input_len as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.take(input_len as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr@ =~= arr@.take(input_len as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-21",
+  "kind": "plain",
+  "expr": "seq.len() > 0",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "seq.len()": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "VB-22",
+  "kind": "plain",
+  "expr": "text@.subrange(0, index - 1 as int) == text@.subrange(0, index as int).drop_last()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "text@.subrange(0, index - 1 as int)": "fail",
+   "text@.subrange(0, index as int).drop_last()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "text@.subrange(0, index - 1 as int) =~= text@.subrange(0, index as int).drop_last()": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-23",
+  "kind": "plain",
+  "expr": "text@ == text@.subrange(0, index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "text@.subrange(0, index as int)": "fail"
+  },
+  "eq_seeds": {
+   "text@ =~= text@.subrange(0, index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-24",
+  "kind": "plain",
+  "expr": "arr@.subrange(0, index - 1 as int) == arr@.subrange(0, index as int).drop_last()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.subrange(0, index - 1 as int)": "fail",
+   "arr@.subrange(0, index as int).drop_last()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.subrange(0, index - 1 as int) =~= arr@.subrange(0, index as int).drop_last()": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-26",
+  "kind": "plain",
+  "expr": "arr@.take((index + 1) as int).drop_last() == arr@.take(index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.take((index + 1) as int).drop_last()": "fail",
+   "arr@.take(index as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.take((index + 1) as int).drop_last() =~= arr@.take(index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-27",
+  "kind": "plain",
+  "expr": "arr@ == arr@.take(input_len as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.take(input_len as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr@ =~= arr@.take(input_len as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-28",
+  "kind": "plain",
+  "expr": "arr@.subrange(0, index - 1 as int) == arr@.subrange(0, index as int).drop_last()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.subrange(0, index - 1 as int)": "fail",
+   "arr@.subrange(0, index as int).drop_last()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.subrange(0, index - 1 as int) =~= arr@.subrange(0, index as int).drop_last()": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-29",
+  "kind": "plain",
+  "expr": "arr@ == arr@.subrange(0, index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.subrange(0, index as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr@ =~= arr@.subrange(0, index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-30",
+  "kind": "plain",
+  "expr": "arr@.take((index + 1) as int).drop_last() == arr@.take(index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.take((index + 1) as int).drop_last()": "fail",
+   "arr@.take(index as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.take((index + 1) as int).drop_last() =~= arr@.take(index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-31",
+  "kind": "plain",
+  "expr": "arr@ == arr@.take(input_len as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.take(input_len as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr@ =~= arr@.take(input_len as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-32",
+  "kind": "plain",
+  "expr": "is_subrange_at(main@, sub@, index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "is_subrange_at(main@, sub@, index as int)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-witness"
+ },
+ {
+  "key": "VB-33",
+  "kind": "plain",
+  "expr": "arr@.subrange(0, index - 1 as int) == arr@.subrange(0, index as int).drop_last()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.subrange(0, index - 1 as int)": "fail",
+   "arr@.subrange(0, index as int).drop_last()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.subrange(0, index - 1 as int) =~= arr@.subrange(0, index as int).drop_last()": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-35",
+  "kind": "plain",
+  "expr": "arr@.subrange(0, index - 1 as int) == arr@.subrange(0, index as int).drop_last()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.subrange(0, index - 1 as int)": "fail",
+   "arr@.subrange(0, index as int).drop_last()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.subrange(0, index - 1 as int) =~= arr@.subrange(0, index as int).drop_last()": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-36",
+  "kind": "plain",
+  "expr": "arr@ == arr@.subrange(0, index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.subrange(0, index as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr@ =~= arr@.subrange(0, index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-full",
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-37",
+  "kind": "plain",
+  "expr": "str1@.take((index + 1) as int).drop_last() == str1@.take(index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "str1@.take((index + 1) as int).drop_last()": "fail",
+   "str1@.take(index as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "str1@.take((index + 1) as int).drop_last() =~= str1@.take(index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-38",
+  "kind": "plain",
+  "expr": "str1@ =~= str1@.take(input_len as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "str1@.take(input_len as int)": "fail"
+  },
+  "eq_seeds": {
+   "str1@ =~= str1@.take(input_len as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-39",
+  "kind": "plain",
+  "expr": "is_divisible(n as int, index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "is_divisible(n as int, index as int)": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "VB-40",
+  "kind": "plain",
+  "expr": "arr@.take((index + 1) as int).drop_last() == arr@.take(index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.take((index + 1) as int).drop_last()": "fail",
+   "arr@.take(index as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.take((index + 1) as int).drop_last() =~= arr@.take(index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-41",
+  "kind": "plain",
+  "expr": "arr@ == arr@.take(input_len as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.take(input_len as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr@ =~= arr@.take(input_len as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-42",
+  "kind": "plain",
+  "expr": "text@.subrange(0, index - 1 as int) == text@.subrange(0, index as int).drop_last()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "text@.subrange(0, index - 1 as int)": "fail",
+   "text@.subrange(0, index as int).drop_last()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "text@.subrange(0, index - 1 as int) =~= text@.subrange(0, index as int).drop_last()": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-43",
+  "kind": "plain",
+  "expr": "text@ == text@.subrange(0, index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "text@.subrange(0, index as int)": "fail"
+  },
+  "eq_seeds": {
+   "text@ =~= text@.subrange(0, index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-44",
+  "kind": "plain",
+  "expr": "arr@.subrange(0, index as int) =~= arr@.subrange(0, (index + 1) as int).drop_last()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.subrange(0, index as int)": "fail",
+   "arr@.subrange(0, (index + 1) as int).drop_last()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.subrange(0, index as int) =~= arr@.subrange(0, (index + 1) as int).drop_last()": "fail"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-45",
+  "kind": "plain",
+  "expr": "arr@ == arr@.subrange(0, index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.subrange(0, index as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr@ =~= arr@.subrange(0, index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-46",
+  "kind": "plain",
+  "expr": "arr@.take((index + 1) as int).drop_last() == arr@.take(index as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.take((index + 1) as int).drop_last()": "fail",
+   "arr@.take(index as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "arr@.take((index + 1) as int).drop_last() =~= arr@.take(index as int)": "pass"
+  },
+  "axioms": [
+   "subrange-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-47",
+  "kind": "plain",
+  "expr": "arr@ == arr@.take(input_len as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr@.take(input_len as int)": "fail"
+  },
+  "eq_seeds": {
+   "arr@ =~= arr@.take(input_len as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-48",
+  "kind": "plain",
+  "expr": "arr[index as int].len() > 0",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr[index as int].len()": "fail"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "VB-49",
+  "kind": "plain",
+  "expr": "arr[min_second_index as int].len() > 0",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr[min_second_index as int].len()": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "VB-50",
+  "kind": "plain",
+  "expr": "arr[min_second_index as int].len() > 0",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "arr[min_second_index as int].len()": "pass"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "VB-53",
+  "kind": "plain",
+  "expr": "is_reorder_of(r, nums@, nums@)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "is_reorder_of(r, nums@, nums@)": "fail"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "VB-54",
+  "kind": "plain",
+  "expr": "is_reorder_of(r2, nums@.update(j-1, nums@[j as int]).update(j as int, nums@[j-1]), old(nums)@)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "VB-64",
+  "kind": "plain",
+  "expr": "forall |a| #[trigger] seq.drop_last().contains(a) <==> seq_to_set_rec(seq.drop_last()).contains(a)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "seq_to_set_rec": "fail"
+  },
+  "bridge": null,
+  "seeds": {
+   "seq_to_set_rec(seq.drop_last()).contains(a)": "invalid",
+   "seq.drop_last()": "fail"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "VB-55",
+  "kind": "plain",
+  "expr": "seq =~= (seq.drop_last().push(seq.last()))",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "seq.drop_last().push(seq.last())": "fail",
+   "seq.last()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "seq =~= (seq.drop_last().push(seq.last()))": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-65",
+  "kind": "forall",
+  "expr": "forall |a| #[trigger] seq.contains(a) <==> seq_to_set_rec(seq).contains(a)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "seq_to_set_rec": "fail"
+  },
+  "bridge": "fail",
+  "seeds": {},
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "VB-66",
+  "kind": "plain",
+  "expr": "forall |n| #[trigger] seq.contains(n) <==> seq_to_set_rec(seq).contains(n)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {
+   "seq_to_set_rec": "fail"
+  },
+  "bridge": null,
+  "seeds": {
+   "seq_to_set_rec(seq).contains(n)": "invalid"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "VB-56",
+  "kind": "plain",
+  "expr": "s =~= s.push(val).drop_last()",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s.push(val).drop_last()": "fail"
+  },
+  "eq_seeds": {
+   "s =~= s.push(val).drop_last()": "fail"
+  },
+  "axioms": [
+   "push-subrange"
+  ],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-58",
+  "kind": "plain",
+  "expr": "nums@.subrange(0, i  as int) =~= (nums@)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "nums@.subrange(0, i  as int)": "fail"
+  },
+  "eq_seeds": {
+   "nums@.subrange(0, i  as int) =~= (nums@)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-59",
+  "kind": "plain",
+  "expr": "x@.take((i + 1) as int).drop_last() == x@.take(i as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "x@.take((i + 1) as int).drop_last()": "fail",
+   "x@.take(i as int)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "x@.take((i + 1) as int).drop_last() =~= x@.take(i as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-60",
+  "kind": "plain",
+  "expr": "x@ == x@.take(x.len() as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "x@.take(x.len() as int)": "fail",
+   "x.len()": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "x@ =~= x@.take(x.len() as int)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-67",
+  "kind": "plain",
+  "expr": "s1.intersect(s2).len() == 0",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s1.intersect(s2).len()": "fail",
+   "s1.intersect(s2)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s1.intersect(s2).len() =~= 0": "fail"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "VB-68",
+  "kind": "plain",
+  "expr": "s1.intersect(s2) =~= s1",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s1.intersect(s2)": "fail"
+  },
+  "eq_seeds": {
+   "s1.intersect(s2) =~= s1": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-69",
+  "kind": "plain",
+  "expr": "s1.intersect(s2).remove(a).len() <= s1.remove(a).len()",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s1.intersect(s2).remove(a).len()": "fail",
+   "s1.remove(a).len()": "fail",
+   "s1.intersect(s2).remove(a)": "fail",
+   "s1.remove(a).intersect(s2)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "VB-70",
+  "kind": "plain",
+  "expr": "s1.intersect(s2).remove(a) =~= s1.remove(a).intersect(s2)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "s1.intersect(s2).remove(a)": "fail",
+   "s1.remove(a).intersect(s2)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {
+   "s1.intersect(s2).remove(a) =~= s1.remove(a).intersect(s2)": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": true,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "AX"
+  ],
+  "label": "AX"
+ },
+ {
+  "key": "VB-61",
+  "kind": "plain",
+  "expr": "forall |k:int| 0<= k < old_result.len() ==> old_result[k] == result[k]",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "old_result[k]": "invalid",
+   "result[k]": "invalid"
+  },
+  "eq_seeds": {
+   "old_result[k] =~= result[k]": "invalid"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "VB-62",
+  "kind": "plain",
+  "expr": "result[result.len() - 1] == v[i as int]",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": false,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "result[result.len() - 1]": "pass"
+  },
+  "eq_seeds": {
+   "result[result.len() - 1] =~= v[i as int]": "pass"
+  },
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [
+   "INST"
+  ],
+  "label": "INST-forall"
+ },
+ {
+  "key": "VB-71",
+  "kind": "plain",
+  "expr": "sum + i <= arith_sum_int(n as nat)",
+  "tactic": null,
+  "has_by_block": true,
+  "proof_context": false,
+  "fuel": {
+   "arith_sum_int": "timeout"
+  },
+  "bridge": null,
+  "seeds": {
+   "sum + i": "fail",
+   "arith_sum_int(n as nat)": "fail",
+   "<all>": "fail"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ },
+ {
+  "key": "VB-63",
+  "kind": "plain",
+  "expr": "f(arr@, i as int)",
+  "tactic": null,
+  "has_by_block": false,
+  "proof_context": true,
+  "fuel": {},
+  "bridge": null,
+  "seeds": {
+   "f(arr@, i as int)": "fail"
+  },
+  "eq_seeds": {},
+  "axioms": [],
+  "nla": "n/a",
+  "shape": {
+   "collection_eq": false,
+   "nonlinear": false,
+   "from_ast": false
+  },
+  "categories": [],
+  "label": "Other"
+ }
+]
